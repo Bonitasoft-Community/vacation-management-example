@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<applications xmlns="http://documentation.bonitasoft.com/application-xml-schema/1.0">
+    <application token="tahiti" version="1.0" profile="User" homePage="myVacationRequest" state="ACTIVATED" layout="custompage_defaultlayout" theme="custompage_defaulttheme">
+        <displayName>Vacation Management</displayName>
+        <description>Tahiti vacation management application</description>
+        <iconPath></iconPath>
+        <applicationPages>
+            <applicationPage customPage="custompage_home" token="home"/>
+            <applicationPage customPage="custompage_myVacationRequests" token="myVacationRequest"/>
+        </applicationPages>
+        <applicationMenus>
+            <applicationMenu applicationPage="myVacationRequest">
+                <displayName>My vacation requests</displayName>
+            </applicationMenu>
+        </applicationMenus>
+    </application>
+</applications>
