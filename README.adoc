@@ -1,0 +1,87 @@
+= Vacation Management Living Application
+
+== About
+This is an official Living Application example for Bonita BPM >7.2.1
+
+This example demonstrates the following concepts:
+
+* Living Application
+* Forms and pages built using the UI Designer
+* Process using BDM and contracts
+* REST API extensions
+
+== Installation
+
+. Start Bonita BPM Studio 7.2.1 or later
+. Download the https://github.com/Bonitasoft-Community/vacation-management-example/releases[application bundle]
+. Extract the bundle to a temporary folder
+. Import the .bos file in your Bonita BPM Studio. It contains 5 diagrams: Example-NewVacationRequest, Example-ModifyPendingVacationRequest, Example-CancelVacationRequest, Example-InitiateVacationAvailable and Example-RemoveAllBusinessData. Each diagram includes a single process definition. It also includes business data model definition, default process configuration and application page (i.e. application user interface definition). *Important*: importing the `.bos` file will ask you to override your existing business data model.
+. Open the Example-InitiateVacationAvailable diagram and run the process (click on "Run" button in a Bonita BPM Studio). This process will initialize a business data that store vacation available counter for each Bonita BPM user declared in the default test environment (ACME organization).
+. You can now deploy and run the "New Vacation Request", "Modify Pending Vacation Request"  and "Cancel Vacation Request" processes by clicking on "Run" button in Bonita BPM Studio. Note that vacation request approval need to be performed by requester (walter.bates) manager (helen.kelly) so you might want to logout and login back with helen.kelly/bpm user. If you want to create (or cancel) several vacation requests, do not click again on "Run" button. Instead click on the "Portal" button and in "User" view go to to "Processes" tab select the process and click on "Start" button.
+. You can now deploy the living application that give user an overview of all created vacation request.
+.. First you need to deploy a REST API extension:
+... In the Portal, switch to "administrator" view. Use drop down list on top right corner to switch from "user" to "Administrator".
+... Go to "Resources".
+... Click on "Add" button.
+... Select the `rest-api-extension.zip` file.
+... Click on "Next" button.
+... Click on "Confirm" button.
+... Read more about http://documentation.bonitasoft.com/creating-rest-api-extension-865[REST API extension] in Bonita BPM http://documentation.bonitasoft.com/[official documentation].
+.. Next you need to deploy the application page:
+... Go again in "administrator" view -> "Resources".
+... Click on "Add" button.
+... Select the `page-ExampleVacationManagement.zip` file.
+... Click on "Next" button.
+... Click on "Confirm" button.
+... Read more about http://documentation.bonitasoft.com/pages[pages] on the Bonita BPM http://documentation.bonitasoft.com/[official documentation].
+. You are now ready to import the application definition that will use the previously deployed page:
+.. In the Portal switch to "administrator" view.
+.. Go to "Applications" tab.
+.. Click on "Import" button.
+.. Select the `Application_Data.xml` file.
+.. Click on "Import" button.
+.. Click on "Close" button.
+.. For more information refer to http://documentation.bonitasoft.com/applications-0[applications] in Bonita BPM official documentation.
+. Run the Vacation Management application by accessing to this URL (the port number may vary): http://localhost:8080/bonita/apps/tahiti[`http://localhost:8080/bonita/apps/tahiti`]. You can find the URL of the application in the Portal "administrator view" -> "Applications".
+
+== Screenshots
+=== Vacation Management Living Application
+image::./screenshots/livingAppsMyVacationRequest.png?raw=true[Vacation Management Application]
+
+==== Vacation Management Living Application - Vacation request to cancel
+image::./screenshots/formCancelVacationRequestInstantiation.png?raw=true[Vacation Management Living Application - Vacation request to cancel]
+
+=== New Vacation Request process
+image::./screenshots/newVacationRequest.png?raw=true[New Vacation Request process]
+
+==== New Vacation Request process - Vacation request creation form
+image::./screenshots/formNewVacationRequestInstantiation.png?raw=true[New Vacation Request process - Vacation request creation form]
+
+==== New Vacation Request process - Vacation request review form
+image::./screenshots/formReviewVacationRequest.png?raw=true[New Vacation Request process - Vacation request review form]
+
+=== Modify Pending Vacation Request process
+image::./screenshots/modifyPendingVacationRequest.png?raw=true[Modify Pending Vacation Request process]
+
+=== Cancel Vacation Request process
+image::./screenshots/cancelVacationRequest.png?raw=true[Cancel Vacation Request process]
+
+==== Cancel Vacation Request process - Vacation request canceled review form
+image::./screenshots/formReviewVacationRequestCancellation.png?raw=true[Cancel Vacation Request process - Vacation request canceled review form]
+
+=== Initiate Vacation Available process
+image::./screenshots/initiateVacationRequest.png?raw=true[Initiate Vacation Available process]
+
+=== Remove all business data process
+image::./screenshots/initiateVacationRequest.png?raw=true[Remove all business data process]
+
+== Compatibility
+This example has been created and built with Bonita BPM 7.2.1 Community Edition.
+
+It should be compatible with any newer version as well as Subscription edition.
+
+== Known limitations
+None so far.
+
+== Issues
+Reports issues and improvement requests on GitHub tracker.
