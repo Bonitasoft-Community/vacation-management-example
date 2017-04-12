@@ -1,7 +1,7 @@
 = Vacation Management Living Application
 
 == About
-This is an official Living Application example for Bonita BPM >7.3.0
+This is an official Living Application example for Bonita BPM >7.4.3
 
 This example demonstrates the following concepts:
 
@@ -12,7 +12,7 @@ This example demonstrates the following concepts:
 
 == Installation
 
-. Start Bonita BPM Studio 7.3.0 or later
+. Start Bonita BPM Studio 7.4.3 or later
 . Download the https://github.com/Bonitasoft-Community/vacation-management-example/releases[application bundle]
 . Extract the bundle to a temporary folder
 . Import the .bos file in your Bonita BPM Studio. It contains 5 diagrams: Example-NewVacationRequest, Example-ModifyPendingVacationRequest, Example-CancelVacationRequest, Example-InitiateVacationAvailable and Example-RemoveAllBusinessData. Each diagram includes a single process definition. It also includes business data model definition, default process configuration and application page (i.e. application user interface definition). *Important*: importing the `.bos` file will ask you to override your existing business data model.
@@ -26,14 +26,14 @@ This example demonstrates the following concepts:
 ... Select the `rest-api-extension.zip` file.
 ... Click on "Next" button.
 ... Click on "Confirm" button.
-... Read more about http://documentation.bonitasoft.com/bonitabpm/?page=api-extensions[REST API extension] in Bonita BPM http://documentation.bonitasoft.com/bonitabpm/[official documentation].
+... Read more about http://documentation.bonitasoft.com/?page=rest-api-extensions[REST API extension] in Bonita BPM http://documentation.bonitasoft.com/[official documentation].
 .. Next you need to deploy the application page:
 ... Go again in "administrator" view -> "Resources".
 ... Click on "Add" button.
 ... Select the `page-ExampleVacationManagement.zip` file.
 ... Click on "Next" button.
 ... Click on "Confirm" button.
-... Read more about http://documentation.bonitasoft.com/bonitabpm/?page=pages[pages] on the Bonita BPM http://documentation.bonitasoft.com/bonitabpm/[official documentation].
+... Read more about http://documentation.bonitasoft.com/?page=pages[pages] on the Bonita BPM http://documentation.bonitasoft.com/[official documentation].
 . You are now ready to import the application definition that will use the previously deployed page:
 .. In the Portal switch to "administrator" view.
 .. Go to "Applications" tab.
@@ -41,7 +41,7 @@ This example demonstrates the following concepts:
 .. Select the `Application_Data.xml` file.
 .. Click on "Import" button.
 .. Click on "Close" button.
-.. For more information refer to http://documentation.bonitasoft.com/bonitabpm/?page=applications[applications] in Bonita BPM official documentation.
+.. For more information refer to http://documentation.bonitasoft.com/?page=applications[applications] in Bonita BPM official documentation.
 . Run the Vacation Management application by accessing to this URL (the port number may vary): http://localhost:8080/bonita/apps/tahiti[`http://localhost:8080/bonita/apps/tahiti`]. You can find the URL of the application in the Portal "administrator view" -> "Applications".
 
 == Screenshots
