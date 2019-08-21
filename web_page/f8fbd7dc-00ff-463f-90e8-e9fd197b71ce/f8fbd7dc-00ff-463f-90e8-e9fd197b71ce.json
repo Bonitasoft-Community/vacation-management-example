@@ -1,0 +1,546 @@
+{
+  "designerVersion" : "1.9.24",
+  "previousDesignerVersion" : "1.5.7",
+  "id" : "f8fbd7dc-00ff-463f-90e8-e9fd197b71ce",
+  "name" : "cancellationReviewForm",
+  "lastUpdate" : 1566317969529,
+  "rows" : [ [ {
+    "type" : "component",
+    "dimension" : {
+      "xs" : 12
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "text" : {
+        "type" : "interpolation",
+        "value" : "Vacation Cancellation Request"
+      },
+      "level" : {
+        "type" : "constant",
+        "value" : "Level 2"
+      },
+      "alignment" : {
+        "type" : "constant",
+        "value" : "left"
+      }
+    },
+    "reference" : "a0d013b1-4056-480f-8b81-20d610fbfd28",
+    "hasValidationError" : false,
+    "id" : "pbTitle"
+  } ], [ {
+    "type" : "component",
+    "dimension" : {
+      "xs" : 12
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "text" : {
+        "type" : "interpolation",
+        "value" : "This is a request from {{requester.firstname}} {{requester.lastname}} to <b>cancel</b> a vacation that has already been approved. This employee currently has {{requesterCurrentDaysAvailable.daysAvailableCounter}} vacation days  available. If you approve this cancellation, this will increase by {{vacationRequestBusinessData.numberOfDays}} days."
+      },
+      "alignment" : {
+        "type" : "constant",
+        "value" : "left"
+      },
+      "allowHTML" : {
+        "type" : "constant",
+        "value" : true
+      },
+      "labelHidden" : {
+        "type" : "constant",
+        "value" : true
+      },
+      "label" : {
+        "type" : "interpolation",
+        "value" : ""
+      },
+      "labelPosition" : {
+        "type" : "constant",
+        "value" : "top"
+      },
+      "labelWidth" : {
+        "type" : "constant",
+        "value" : 4
+      }
+    },
+    "reference" : "0ceeaa9b-131b-401d-a5b0-611a82b547ed",
+    "hasValidationError" : false,
+    "id" : "pbText"
+  } ], [ {
+    "type" : "component",
+    "dimension" : {
+      "xs" : 12
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "text" : {
+        "type" : "interpolation",
+        "value" : "Details of request to be cancelled:"
+      },
+      "level" : {
+        "type" : "constant",
+        "value" : "Level 4"
+      },
+      "alignment" : {
+        "type" : "constant",
+        "value" : "left"
+      }
+    },
+    "reference" : "d66536ce-fade-4cc4-be0e-5152e440f566",
+    "hasValidationError" : false,
+    "id" : "pbTitle"
+  } ], [ {
+    "type" : "component",
+    "dimension" : {
+      "xs" : 4
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "readOnly" : {
+        "type" : "constant",
+        "value" : true
+      },
+      "required" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "labelHidden" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "label" : {
+        "type" : "interpolation",
+        "value" : "Start date"
+      },
+      "labelPosition" : {
+        "type" : "constant",
+        "value" : "top"
+      },
+      "labelWidth" : {
+        "type" : "constant",
+        "value" : 4
+      },
+      "placeholder" : {
+        "type" : "interpolation",
+        "value" : "MM/dd/yyyy"
+      },
+      "value" : {
+        "type" : "variable",
+        "value" : "vacationRequestBusinessData.startDate"
+      },
+      "dateFormat" : {
+        "type" : "constant",
+        "value" : "MM/dd/yyyy"
+      },
+      "showToday" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "todayLabel" : {
+        "type" : "interpolation",
+        "value" : "Today"
+      }
+    },
+    "reference" : "affa0f64-f59a-493d-af53-53d0a4b40111",
+    "hasValidationError" : false,
+    "id" : "pbDatePicker"
+  }, {
+    "type" : "component",
+    "dimension" : {
+      "xs" : 4
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "readOnly" : {
+        "type" : "constant",
+        "value" : true
+      },
+      "required" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "labelHidden" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "label" : {
+        "type" : "interpolation",
+        "value" : "Return date"
+      },
+      "labelPosition" : {
+        "type" : "constant",
+        "value" : "top"
+      },
+      "labelWidth" : {
+        "type" : "constant",
+        "value" : 4
+      },
+      "placeholder" : {
+        "type" : "interpolation",
+        "value" : "MM/dd/yyyy"
+      },
+      "value" : {
+        "type" : "variable",
+        "value" : "vacationRequestBusinessData.returnDate"
+      },
+      "dateFormat" : {
+        "type" : "constant",
+        "value" : "MM/dd/yyyy"
+      },
+      "showToday" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "todayLabel" : {
+        "type" : "interpolation",
+        "value" : "Today"
+      }
+    },
+    "reference" : "d36d96b0-7202-41c2-8c80-bb7e8496fa99",
+    "hasValidationError" : false,
+    "id" : "pbDatePicker"
+  }, {
+    "type" : "component",
+    "dimension" : {
+      "xs" : 4
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "required" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "minLength" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "maxLength" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "readOnly" : {
+        "type" : "constant",
+        "value" : true
+      },
+      "labelHidden" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "label" : {
+        "type" : "interpolation",
+        "value" : "Number of days"
+      },
+      "labelPosition" : {
+        "type" : "constant",
+        "value" : "top"
+      },
+      "labelWidth" : {
+        "type" : "constant",
+        "value" : 4
+      },
+      "placeholder" : {
+        "type" : "interpolation"
+      },
+      "value" : {
+        "type" : "variable",
+        "value" : "vacationRequestBusinessData.numberOfDays"
+      },
+      "type" : {
+        "type" : "constant",
+        "value" : "text"
+      },
+      "min" : {
+        "type" : "constant"
+      },
+      "max" : {
+        "type" : "constant"
+      },
+      "step" : {
+        "type" : "constant",
+        "value" : 1
+      }
+    },
+    "reference" : "f6ca67f4-dbb7-4afa-9537-7b2e4d2a1a8c",
+    "hasValidationError" : false,
+    "id" : "pbInput"
+  } ], [ {
+    "type" : "formContainer",
+    "dimension" : {
+      "xs" : 12
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : false
+      }
+    },
+    "reference" : "ffe409ed-6f5b-4b95-b6e4-152f2d258fbb",
+    "hasValidationError" : false,
+    "id" : "pbFormContainer",
+    "container" : {
+      "type" : "container",
+      "dimension" : {
+        "xs" : 12
+      },
+      "propertyValues" : { },
+      "reference" : "2294367a-1151-4061-bc36-7b71cba886a5",
+      "hasValidationError" : false,
+      "id" : "pbContainer",
+      "rows" : [ [ {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "disabled" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "required" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "Decision"
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "top"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 4
+          },
+          "inline" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "availableValues" : {
+            "type" : "expression",
+            "value" : "availableValues"
+          },
+          "displayedKey" : {
+            "type" : "constant",
+            "value" : "display"
+          },
+          "returnedKey" : {
+            "type" : "constant",
+            "value" : "value"
+          },
+          "selectedValue" : {
+            "type" : "variable",
+            "value" : "formInput.cancellationApprovedContract"
+          }
+        },
+        "reference" : "9f9ed2b7-facc-45b4-a625-cf8ed476c8fd",
+        "hasValidationError" : false,
+        "id" : "pbRadioButtons"
+      } ], [ {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "alignment" : {
+            "type" : "constant",
+            "value" : "center"
+          },
+          "isDisplayed" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "targetUrlOnSuccess" : {
+            "type" : "interpolation",
+            "value" : "/bonita/apps/tahiti/index/"
+          },
+          "class" : {
+            "type" : "constant",
+            "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.ButtonWidget"
+          },
+          "label" : {
+            "type" : "constant",
+            "value" : "Submit"
+          },
+          "collectionPosition" : {
+            "type" : "constant"
+          },
+          "buttonStyle" : {
+            "type" : "constant",
+            "value" : "primary"
+          },
+          "dimension" : {
+            "type" : "constant",
+            "value" : 12
+          },
+          "collectionToModify" : {
+            "type" : "variable"
+          },
+          "widgetId" : {
+            "type" : "constant",
+            "value" : "pbButton"
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "action" : {
+            "type" : "constant",
+            "value" : "Submit task"
+          },
+          "dataToSend" : {
+            "type" : "expression",
+            "value" : "formInput"
+          },
+          "readonly" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "disabled" : {
+            "type" : "expression",
+            "value" : "$form.$invalid"
+          },
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "url" : {
+            "type" : "interpolation"
+          },
+          "dataFromSuccess" : {
+            "type" : "variable"
+          },
+          "dataFromError" : {
+            "type" : "variable"
+          },
+          "valueToAdd" : {
+            "type" : "constant"
+          },
+          "removeItem" : {
+            "type" : "variable"
+          }
+        },
+        "reference" : "201042cc-3a9f-4d7f-838c-7e5ac8fda2e3",
+        "hasValidationError" : false,
+        "id" : "pbButton"
+      } ] ]
+    }
+  } ] ],
+  "assets" : [ {
+    "id" : "7717b492-b266-4d50-9de6-17c50be6923a",
+    "name" : "style.css",
+    "type" : "css",
+    "order" : 1,
+    "external" : false
+  }, {
+    "id" : "e231ce00-5096-42b8-97b5-3cf1aa5222a1",
+    "name" : "ui-bootstrap-tpls-0.13.0.min.js",
+    "type" : "js",
+    "order" : 2,
+    "external" : false
+  } ],
+  "inactiveAssets" : [ ],
+  "data" : {
+    "taskId" : {
+      "type" : "urlparameter",
+      "value" : "id",
+      "exposed" : false
+    },
+    "context" : {
+      "type" : "url",
+      "value" : "/bonita/API/bpm/userTask/{{taskId}}/context",
+      "exposed" : false
+    },
+    "formInput" : {
+      "type" : "json",
+      "value" : "{\r\n  \"cancellationApprovedContract\" : null\r\n}",
+      "exposed" : false
+    },
+    "requester" : {
+      "type" : "url",
+      "value" : "../API/identity/user/{{vacationRequestBusinessData.requesterBonitaBPMId_string}}",
+      "exposed" : false
+    },
+    "requesterCurrentDaysAvailable" : {
+      "type" : "url",
+      "value" : "../API/bdm/businessData/com.company.model.VacationAvailable?q=findByBonitaBPMId&p=0&c=1&f=bonitaBPMId={{vacationRequestBusinessData.requesterBonitaBPMId_string}}",
+      "exposed" : false
+    },
+    "vacationRequestBusinessData" : {
+      "type" : "url",
+      "value" : "../{{context.vacationRequestToCancel_ref.link}}",
+      "exposed" : false
+    },
+    "availableValues" : {
+      "type" : "json",
+      "value" : "[{\"display\":\"Approve cancellation\",\"value\":true},{\"display\":\"Refuse cancellation\",\"value\":false}]",
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "uuid" : "f8fbd7dc-00ff-463f-90e8-e9fd197b71ce",
+  "type" : "form",
+  "description" : "Page generated with Bonita UI designer"
+}

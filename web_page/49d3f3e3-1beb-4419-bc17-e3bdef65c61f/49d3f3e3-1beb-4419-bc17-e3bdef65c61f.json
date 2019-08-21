@@ -1,0 +1,251 @@
+{
+  "designerVersion" : "1.9.24",
+  "previousDesignerVersion" : "1.5.7",
+  "id" : "49d3f3e3-1beb-4419-bc17-e3bdef65c61f",
+  "name" : "removeAllBusinessData",
+  "lastUpdate" : 1566317970749,
+  "rows" : [ [ {
+    "type" : "component",
+    "dimension" : {
+      "xs" : 12
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "text" : {
+        "type" : "interpolation",
+        "value" : "Click on the button below to start a process to remove all business data related to vacation request processes."
+      },
+      "level" : {
+        "type" : "constant",
+        "value" : "Level 3"
+      },
+      "alignment" : {
+        "type" : "constant",
+        "value" : "left"
+      }
+    },
+    "reference" : "3004cce1-4864-4bf9-a5c0-c60a38969312",
+    "hasValidationError" : false,
+    "id" : "pbTitle"
+  } ], [ {
+    "type" : "component",
+    "dimension" : {
+      "xs" : 12
+    },
+    "propertyValues" : {
+      "alignment" : {
+        "type" : "constant",
+        "value" : "center"
+      },
+      "isDisplayed" : {
+        "type" : "constant",
+        "value" : true
+      },
+      "targetUrlOnSuccess" : {
+        "type" : "interpolation",
+        "value" : ""
+      },
+      "class" : {
+        "type" : "constant",
+        "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.ButtonWidget"
+      },
+      "label" : {
+        "type" : "interpolation",
+        "value" : "Remove all business data"
+      },
+      "buttonStyle" : {
+        "type" : "constant",
+        "value" : "danger"
+      },
+      "dimension" : {
+        "type" : "constant",
+        "value" : 12
+      },
+      "collectionToModify" : {
+        "type" : "variable"
+      },
+      "widgetId" : {
+        "type" : "constant",
+        "value" : "pbButton"
+      },
+      "action" : {
+        "type" : "constant",
+        "value" : "Start process"
+      },
+      "labelHidden" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "dataToSend" : {
+        "type" : "constant"
+      },
+      "readonly" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "disabled" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "url" : {
+        "type" : "interpolation"
+      },
+      "dataFromSuccess" : {
+        "type" : "variable",
+        "value" : "successfulResponse"
+      },
+      "dataFromError" : {
+        "type" : "variable",
+        "value" : "failedResponse"
+      },
+      "collectionPosition" : {
+        "type" : "constant",
+        "value" : "Last"
+      },
+      "valueToAdd" : {
+        "type" : "constant"
+      },
+      "removeItem" : {
+        "type" : "variable"
+      }
+    },
+    "reference" : "8857686a-0cce-4895-888a-3d0f3f4ec9d4",
+    "hasValidationError" : false,
+    "id" : "pbButton"
+  } ], [ {
+    "type" : "component",
+    "dimension" : {
+      "xs" : 12
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : "alert alert-success fade in"
+      },
+      "hidden" : {
+        "type" : "expression",
+        "value" : "!successfulResponse"
+      },
+      "text" : {
+        "type" : "interpolation",
+        "value" : "Business data successfully removed!"
+      },
+      "alignment" : {
+        "type" : "constant",
+        "value" : "left"
+      },
+      "allowHTML" : {
+        "type" : "constant",
+        "value" : true
+      },
+      "labelHidden" : {
+        "type" : "constant",
+        "value" : true
+      },
+      "label" : {
+        "type" : "interpolation",
+        "value" : ""
+      },
+      "labelPosition" : {
+        "type" : "constant",
+        "value" : "top"
+      },
+      "labelWidth" : {
+        "type" : "constant",
+        "value" : 4
+      }
+    },
+    "reference" : "baeff188-c743-4d3c-8599-10b5427cc2f9",
+    "hasValidationError" : false,
+    "id" : "pbText"
+  } ], [ {
+    "type" : "component",
+    "dimension" : {
+      "xs" : 12
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : "alert alert-danger fade in"
+      },
+      "hidden" : {
+        "type" : "expression",
+        "value" : "!failedResponse"
+      },
+      "text" : {
+        "type" : "interpolation",
+        "value" : "Error while removing business data: {{ failedResponse }}"
+      },
+      "alignment" : {
+        "type" : "constant",
+        "value" : "left"
+      },
+      "allowHTML" : {
+        "type" : "constant",
+        "value" : true
+      },
+      "labelHidden" : {
+        "type" : "constant",
+        "value" : true
+      },
+      "label" : {
+        "type" : "interpolation",
+        "value" : ""
+      },
+      "labelPosition" : {
+        "type" : "constant",
+        "value" : "top"
+      },
+      "labelWidth" : {
+        "type" : "constant",
+        "value" : 4
+      }
+    },
+    "reference" : "7dc3fbb3-8aab-4cff-a422-17e7f09de681",
+    "hasValidationError" : false,
+    "id" : "pbText"
+  } ] ],
+  "assets" : [ {
+    "id" : "f0cc3492-3f81-4956-80be-2d97742d2a1a",
+    "name" : "style.css",
+    "type" : "css",
+    "order" : 1,
+    "external" : false
+  }, {
+    "id" : "51a4192c-edac-4312-befe-3372d6a04a11",
+    "name" : "ui-bootstrap-tpls-0.13.0.min.js",
+    "type" : "js",
+    "order" : 2,
+    "external" : false
+  } ],
+  "inactiveAssets" : [ ],
+  "data" : {
+    "failedResponse" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "successfulResponse" : {
+      "type" : "constant",
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "uuid" : "49d3f3e3-1beb-4419-bc17-e3bdef65c61f",
+  "type" : "form",
+  "description" : "Page generated with Bonita UI designer"
+}
