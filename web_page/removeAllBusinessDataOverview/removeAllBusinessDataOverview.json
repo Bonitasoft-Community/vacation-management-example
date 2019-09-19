@@ -1,0 +1,158 @@
+{
+  "designerVersion" : "1.9.24",
+  "previousDesignerVersion" : "1.5.7",
+  "id" : "removeAllBusinessDataOverview",
+  "name" : "removeAllBusinessDataOverview",
+  "lastUpdate" : 1568900522972,
+  "rows" : [ [ {
+    "type" : "component",
+    "dimension" : {
+      "xs" : 12
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "text" : {
+        "type" : "interpolation",
+        "value" : "List of vacation available per user"
+      },
+      "level" : {
+        "type" : "constant",
+        "value" : "Level 2"
+      },
+      "alignment" : {
+        "type" : "constant",
+        "value" : "left"
+      }
+    },
+    "reference" : "6b3ef5dc-a961-4cfb-be8d-2ddd561feae9",
+    "hasValidationError" : false,
+    "id" : "pbTitle"
+  } ], [ {
+    "type" : "component",
+    "dimension" : {
+      "xs" : 12
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "headers" : {
+        "type" : "constant",
+        "value" : [ "User id", "# of days" ]
+      },
+      "content" : {
+        "type" : "expression",
+        "value" : "vacationsAvailable"
+      },
+      "columnsKey" : {
+        "type" : "constant",
+        "value" : [ "bonitaBPMId", "daysAvailableCounter" ]
+      },
+      "selectedRow" : {
+        "type" : "variable"
+      }
+    },
+    "reference" : "5a98543c-407c-47b7-935f-0375cbfce6fb",
+    "hasValidationError" : false,
+    "id" : "pbTable"
+  } ], [ {
+    "type" : "component",
+    "dimension" : {
+      "xs" : 12
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "text" : {
+        "type" : "interpolation",
+        "value" : "List of vacation request per user"
+      },
+      "level" : {
+        "type" : "constant",
+        "value" : "Level 2"
+      },
+      "alignment" : {
+        "type" : "constant",
+        "value" : "left"
+      }
+    },
+    "reference" : "9870faa7-7812-4742-b26d-73ca08a33ab4",
+    "hasValidationError" : false,
+    "id" : "pbTitle"
+  } ], [ {
+    "type" : "component",
+    "dimension" : {
+      "xs" : 12
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "headers" : {
+        "type" : "constant",
+        "value" : [ "Requester id", "Reviewer id", "Start date", "Return date", "Status", "Comments" ]
+      },
+      "content" : {
+        "type" : "expression",
+        "value" : "vacationRequests"
+      },
+      "columnsKey" : {
+        "type" : "constant",
+        "value" : [ "requesterBonitaBPMId", "reviewerBonitaBPMId", "startDate  | date : mediumDate : 'UTC'", "returnDate  | date : mediumDate : 'UTC'", "status", "comments" ]
+      },
+      "selectedRow" : {
+        "type" : "variable"
+      }
+    },
+    "reference" : "5625c3bb-c227-4f40-9fd3-ea29e1f47619",
+    "hasValidationError" : false,
+    "id" : "pbTable"
+  } ] ],
+  "assets" : [ {
+    "id" : "77991453-3b23-49b4-92c6-d3f08a135e87",
+    "name" : "style.css",
+    "type" : "css",
+    "order" : 1,
+    "external" : false
+  } ],
+  "inactiveAssets" : [ ],
+  "data" : {
+    "vacationsAvailable" : {
+      "type" : "url",
+      "value" : "../API/bdm/businessData/com.company.model.VacationAvailable?q=find&p=0&c=100",
+      "exposed" : false
+    },
+    "vacationRequests" : {
+      "type" : "url",
+      "value" : "../API/bdm/businessData/com.company.model.VacationRequest?q=find&p=0&c=100",
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "uuid" : "8a884891-029c-4948-947a-5088644915fc",
+  "type" : "form",
+  "description" : "Page generated with Bonita UI designer"
+}

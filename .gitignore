@@ -8,6 +8,8 @@
 
 # You can also ignore in lib folder jar files related to connector provided by Bonita
 /lib/bonita-connector-email-impl-1.0.15.jar
+/lib/bonita-connector-email-1.1.0.jar
+/lib/bonita-connector-email-1.1.1.jar
 /lib/bonita-connector-google-calendar-v3-common-1.0.0.jar
 /lib/bonita-connector-google-calendar-v3-create-event-impl-1.0.0.jar
 /lib/bonita-connector-google-calendar-v3-delete-event-impl-1.0.0.jar

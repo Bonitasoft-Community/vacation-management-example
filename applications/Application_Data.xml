@@ -7,5 +7,6 @@
         <applicationPages>
             <applicationPage customPage="custompage_ExampleVacationManagement" token="index"/>
         </applicationPages>
+        <applicationMenus/>
     </application>
 </applications>

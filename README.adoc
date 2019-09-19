@@ -1,7 +1,7 @@
 = Vacation management Living Application
 
 == About
-This is an official Living Application example for Bonita >7.9.2
+This is an official Living Application example for Bonita >7.9.3
 
 This example demonstrates the following concepts:
 
@@ -12,11 +12,11 @@ This example demonstrates the following concepts:
 
 == Installation
 
-. Start Bonita Studio 7.9.2 or later
+. Start Bonita Studio 7.9.3 or later
 . Download the https://github.com/Bonitasoft-Community/vacation-management-example/releases[application bundle]
 . Extract the bundle to a temporary folder
 . Import the .bos file in your Bonita Studio. It contains 5 diagrams: Example-NewVacationRequest, Example-ModifyPendingVacationRequest, Example-CancelVacationRequest, Example-InitiateVacationAvailable and Example-RemoveAllBusinessData. Each diagram includes a single process definition. It also includes business data model definition, default process configuration, application page and definition (i.e. application user interface definition). *Important*: importing the `.bos` file will ask you to override your existing business data model.
-. Open the Example-InitiateVacationAvailable diagram and run the process (click on "Run" button in a Bonita Studio). This process will initialize a business data that store vacation available counter for each Bonita user declared in the default test environment (ACME organization).
+. Open the Example-InitiateVacationAvailable diagram and run the process (click on **Run** button in a Bonita Studio). This process will initialize a business data that store vacation available counter for each Bonita user declared in the default test environment (ACME organization).
 . You can now deploy and run the "New Vacation Request", "Modify Pending Vacation Request"  and "Cancel Vacation Request" processes by clicking on "Run" button in Bonita Studio. Note that vacation request approval need to be performed by requester (walter.bates) manager (helen.kelly) so you might want to logout and login back with helen.kelly/bpm user. If you want to create (or cancel) several vacation requests, do not click again on "Run" button. Instead click on the "Portal" button and in "User" view go to to "Processes" tab select the process and click on "Start" button.
 . You can now deploy the living application that give user an overview of all created vacation request.
 .. First you need to deploy a REST API extension:

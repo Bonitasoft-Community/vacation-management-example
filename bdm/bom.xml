@@ -5,8 +5,8 @@
             <description>An employee vacation request.&#xD;
 Possible status values are: pending, approved, refused, processing cancellation and cancelled.</description>
             <fields>
-                <field type="LONG" length="255" name="requesterBonitaBPMId" nullable="false" collection="false"/>
-                <field type="LONG" length="255" name="reviewerBonitaBPMId" nullable="true" collection="false"/>
+                <field type="LONG" length="255" name="requesterBonitaUserId" nullable="false" collection="false"/>
+                <field type="LONG" length="255" name="reviewerBonitaUserId" nullable="true" collection="false"/>
                 <field type="LOCALDATE" length="255" name="startDate" nullable="false" collection="false"/>
                 <field type="LOCALDATE" length="255" name="returnDate" nullable="false" collection="false"/>
                 <field type="INTEGER" length="255" name="numberOfDays" nullable="false" collection="false"/>
@@ -17,34 +17,34 @@ Possible status values are: pending, approved, refused, processing cancellation 
             </fields>
             <uniqueConstraints/>
             <queries>
-                <query name="findModifiableByBonitaBPMId" content="SELECT l &#xD;&#xA;FROM VacationRequest l &#xD;&#xA;WHERE l.requesterBonitaBPMId = :requesterBonitaBPMId&#xD;&#xA;AND l.startDate &gt; CURRENT_DATE&#xD;&#xA;AND l.status IN('pending')&#xD;&#xA;ORDER BY l.startDate ASC" returnType="java.util.List">
+                <query name="findModifiableByBonitaUserId" content="SELECT l &#xA;FROM VacationRequest l &#xA;WHERE l.requesterBonitaUserId = :requesterBonitaUserId&#xA;AND l.startDate &gt; CURRENT_DATE&#xA;AND l.status IN('pending')&#xA;ORDER BY l.startDate ASC" returnType="java.util.List">
                     <queryParameters>
-                        <queryParameter name="requesterBonitaBPMId" className="java.lang.Long"/>
+                        <queryParameter name="requesterBonitaUserId" className="java.lang.Long"/>
                     </queryParameters>
                 </query>
-                <query name="findCancellableByBonitaBPMId" content="SELECT l &#xD;&#xA;FROM VacationRequest l &#xD;&#xA;WHERE l.requesterBonitaBPMId = :requesterBonitaBPMId&#xD;&#xA;AND l.status IN('pending', 'approved')&#xD;&#xA;ORDER BY l.startDate ASC" returnType="java.util.List">
+                <query name="findCancellableByBonitaUserId" content="SELECT l &#xA;FROM VacationRequest l &#xA;WHERE l.requesterBonitaUserId = :requesterBonitaUserId&#xA;AND l.status IN('pending', 'approved')&#xA;ORDER BY l.startDate ASC" returnType="java.util.List">
                     <queryParameters>
-                        <queryParameter name="requesterBonitaBPMId" className="java.lang.Long"/>
+                        <queryParameter name="requesterBonitaUserId" className="java.lang.Long"/>
                     </queryParameters>
                 </query>
             </queries>
             <indexes>
                 <index name="INDEX_1">
                     <fieldNames>
-                        <fieldName>requesterBonitaBPMId</fieldName>
+                        <fieldName>requesterBonitaUserId</fieldName>
                     </fieldNames>
                 </index>
                 <index name="INDEX_2">
                     <fieldNames>
-                        <fieldName>requesterBonitaBPMId</fieldName>
                         <fieldName>status</fieldName>
+                        <fieldName>requesterBonitaUserId</fieldName>
                     </fieldNames>
                 </index>
                 <index name="INDEX_3">
                     <fieldNames>
-                        <fieldName>requesterBonitaBPMId</fieldName>
                         <fieldName>status</fieldName>
                         <fieldName>startDate</fieldName>
+                        <fieldName>requesterBonitaUserId</fieldName>
                     </fieldNames>
                 </index>
             </indexes>
@@ -52,21 +52,21 @@ Possible status values are: pending, approved, refused, processing cancellation 
         <businessObject qualifiedName="com.company.model.VacationAvailable">
             <description>The number of vacation days available to the specified employee.</description>
             <fields>
-                <field type="LONG" length="255" name="bonitaBPMId" nullable="false" collection="false"/>
+                <field type="LONG" length="255" name="bonitaUserId" nullable="false" collection="false"/>
                 <field type="INTEGER" length="255" name="daysAvailableCounter" nullable="false" collection="false"/>
             </fields>
             <uniqueConstraints>
-                <uniqueConstraint name="uniqueBonitaBPMId">
+                <uniqueConstraint name="uniqueBonitaUserId">
                     <fieldNames>
-                        <fieldName>bonitaBPMId</fieldName>
+                        <fieldName>bonitaUserId</fieldName>
                     </fieldNames>
                 </uniqueConstraint>
             </uniqueConstraints>
             <queries/>
             <indexes>
-                <index name="INDEX_4">
+                <index name="INDEX_BONITA_USER_ID">
                     <fieldNames>
-                        <fieldName>bonitaBPMId</fieldName>
+                        <fieldName>bonitaUserId</fieldName>
                     </fieldNames>
                 </index>
             </indexes>

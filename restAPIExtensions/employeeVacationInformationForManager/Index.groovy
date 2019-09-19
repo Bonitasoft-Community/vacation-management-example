@@ -93,6 +93,7 @@ public class Index implements RestApiController {
         //
         def response = [isManager: isManager, employeesVacationRequests: employeesVacationRequests, employeesVacationAvailable: employeesVacationAvailable]
         
+		// Use error log level to avoid the need of logging configuration when executed from test environment embedded in Bonita Studio
         LOGGER.error("Response: " + response)
 
         responseBuilder.with {
