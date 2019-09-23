@@ -52,7 +52,8 @@
 
 # ACME test organization is provided by Bonita Studio.
 # You probably don't want to include it except if you did some customization.
-/organizations/ACME.organization
+# We include the organization as it is used in automated testing done by Bonita Continuous Delivery module.
+#/organizations/ACME.organization
 
 # Ignore the Groovy script sources provided with Bonita Studio.
 /src-providedGroovy
