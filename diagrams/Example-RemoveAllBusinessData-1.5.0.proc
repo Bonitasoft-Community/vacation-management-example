@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
-  <process:MainProcess xmi:id="_VImuEEUNEeeJkrA3PIO9Tw" name="Example-RemoveAllBusinessData" version="1.5.0" author="antoine" bonitaVersion="7.9.2" bonitaModelVersion="7.9.0-002" configId="ACED000574000E372E392E302D303032372E392E32">
+  <process:MainProcess xmi:id="_VImuEEUNEeeJkrA3PIO9Tw" name="Example-RemoveAllBusinessData" version="1.5.0" author="antoine" bonitaVersion="7.9.3" bonitaModelVersion="7.9.0-002" configId="ACED000574000E372E392E302D303032372E392E33">
     <elements xmi:type="process:Pool" xmi:id="_VInVIEUNEeeJkrA3PIO9Tw" documentation="A purelly technical process to clean up the data for testing purpose." name="Remove All Business Data" version="1.5.0" displayName="Remove all business data">
       <elements xmi:type="process:Lane" xmi:id="_VInVIUUNEeeJkrA3PIO9Tw" name="Technical lane" actor="_VInVXUUNEeeJkrA3PIO9Tw">
         <elements xmi:type="process:StartEvent" xmi:id="_VInVIkUNEeeJkrA3PIO9Tw" name="Start" outgoing="_VInVWkUNEeeJkrA3PIO9Tw">

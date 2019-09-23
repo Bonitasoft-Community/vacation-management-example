@@ -81,7 +81,7 @@ image::./screenshots/initiateVacationRequest.png?raw=true[Initiate Vacation Avai
 image::./screenshots/initiateVacationRequest.png?raw=true[Remove all business data process]
 
 == Compatibility
-This example has been created and built with Bonita 7.9.2 Community Edition.
+This example has been created and built with Bonita 7.9.3 Community Edition.
 
 It should be compatible with any newer version as well as Subscription edition.
 
