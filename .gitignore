@@ -7,30 +7,31 @@
 /lib/bdm-client-pojo.jar
 
 # You can also ignore in lib folder jar files related to connector provided by Bonita
-/lib/bonita-connector-email-impl-1.0.15.jar
-/lib/bonita-connector-email-1.1.0.jar
-/lib/bonita-connector-email-1.1.1.jar
-/lib/bonita-connector-google-calendar-v3-common-1.0.0.jar
-/lib/bonita-connector-google-calendar-v3-create-event-impl-1.0.0.jar
-/lib/bonita-connector-google-calendar-v3-delete-event-impl-1.0.0.jar
-/lib/bonita-connector-google-calendar-v3-update-event-impl-1.0.0.jar
-/lib/bonita-userfilter-initiator-manager-impl-1.0.0-SNAPSHOT.jar
-/lib/commons-logging-1.1.1.jar
-/lib/google-api-client-1.18.0-rc.jar
-/lib/google-api-services-calendar-v3-rev87-1.18.0-rc.jar
-/lib/google-http-client-1.18.0-rc.jar
-/lib/google-http-client-jackson2-1.18.0-rc.jar
-/lib/google-oauth-client-1.18.0-rc.jar
-/lib/google-oauth-client-java6-1.18.0-rc.jar
-/lib/google-oauth-client-jetty-1.18.0-rc.jar
-/lib/httpclient-4.0.1.jar
-/lib/httpcore-4.0.1.jar
-/lib/jackson-core-2.1.3.jar
-/lib/jetty-6.1.26.jar
-/lib/jetty-util-6.1.26.jar
-/lib/jsr305-1.3.9.jar
-/lib/mail-1.4.7.jar
-/lib/servlet-api-2.5-20081211.jar
+# Actually they are usefull for automated test done with Bonita BCD module as they will not be provided by this module (only the Studio does provided them)
+#/lib/bonita-connector-email-impl-1.0.15.jar
+#/lib/bonita-connector-email-1.1.0.jar
+#/lib/bonita-connector-email-1.1.1.jar
+#/lib/bonita-connector-google-calendar-v3-common-1.0.0.jar
+#/lib/bonita-connector-google-calendar-v3-create-event-impl-1.0.0.jar
+#/lib/bonita-connector-google-calendar-v3-delete-event-impl-1.0.0.jar
+#/lib/bonita-connector-google-calendar-v3-update-event-impl-1.0.0.jar
+#/lib/bonita-userfilter-initiator-manager-impl-1.0.0-SNAPSHOT.jar
+#/lib/commons-logging-1.1.1.jar
+#/lib/google-api-client-1.18.0-rc.jar
+#/lib/google-api-services-calendar-v3-rev87-1.18.0-rc.jar
+#/lib/google-http-client-1.18.0-rc.jar
+#/lib/google-http-client-jackson2-1.18.0-rc.jar
+#/lib/google-oauth-client-1.18.0-rc.jar
+#/lib/google-oauth-client-java6-1.18.0-rc.jar
+#/lib/google-oauth-client-jetty-1.18.0-rc.jar
+#/lib/httpclient-4.0.1.jar
+#/lib/httpcore-4.0.1.jar
+#/lib/jackson-core-2.1.3.jar
+#/lib/jetty-6.1.26.jar
+#/lib/jetty-util-6.1.26.jar
+#/lib/jsr305-1.3.9.jar
+#/lib/mail-1.4.7.jar
+#/lib/servlet-api-2.5-20081211.jar
 
 # Classpath configuration for Bonita Studio. Automatically generated.
 .classpath
