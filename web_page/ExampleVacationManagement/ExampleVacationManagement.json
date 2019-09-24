@@ -1,0 +1,1277 @@
+{
+  "designerVersion" : "1.9.24",
+  "previousDesignerVersion" : "1.5.7",
+  "id" : "ExampleVacationManagement",
+  "name" : "ExampleVacationManagement",
+  "lastUpdate" : 1568900444169,
+  "rows" : [ [ {
+    "type" : "container",
+    "dimension" : {
+      "xs" : 12
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "repeatedCollection" : {
+        "type" : "variable",
+        "value" : ""
+      }
+    },
+    "reference" : "a5cdc273-f50d-4239-9a30-9b9b35cf422f",
+    "hasValidationError" : false,
+    "id" : "pbContainer",
+    "rows" : [ [ {
+      "type" : "component",
+      "dimension" : {
+        "xs" : 2
+      },
+      "propertyValues" : {
+        "cssClasses" : {
+          "type" : "constant",
+          "value" : ""
+        },
+        "hidden" : {
+          "type" : "constant",
+          "value" : false
+        },
+        "srcType" : {
+          "type" : "constant",
+          "value" : "Asset"
+        },
+        "url" : {
+          "type" : "constant"
+        },
+        "assetName" : {
+          "type" : "constant",
+          "value" : "logo.png"
+        },
+        "alt" : {
+          "type" : "interpolation",
+          "value" : "Logo"
+        }
+      },
+      "reference" : "d2b07fa8-6dc5-4345-8696-e5f509f0f750",
+      "hasValidationError" : false,
+      "id" : "pbImage"
+    }, {
+      "type" : "component",
+      "dimension" : {
+        "xs" : 6
+      },
+      "propertyValues" : {
+        "cssClasses" : {
+          "type" : "constant",
+          "value" : ""
+        },
+        "hidden" : {
+          "type" : "constant",
+          "value" : false
+        },
+        "text" : {
+          "type" : "interpolation",
+          "value" : "Tahiti Vacation Management"
+        },
+        "level" : {
+          "type" : "constant",
+          "value" : "Level 1"
+        },
+        "alignment" : {
+          "type" : "constant",
+          "value" : "left"
+        }
+      },
+      "reference" : "c4b8f698-9ca5-4fce-add2-134c1175daeb",
+      "hasValidationError" : false,
+      "id" : "pbTitle"
+    }, {
+      "type" : "component",
+      "dimension" : {
+        "xs" : 4
+      },
+      "propertyValues" : {
+        "cssClasses" : {
+          "type" : "constant",
+          "value" : ""
+        },
+        "hidden" : {
+          "type" : "constant",
+          "value" : false
+        },
+        "text" : {
+          "type" : "interpolation",
+          "value" : "{{session.user_name}}"
+        },
+        "alignment" : {
+          "type" : "constant",
+          "value" : "left"
+        },
+        "allowHTML" : {
+          "type" : "constant",
+          "value" : true
+        },
+        "labelHidden" : {
+          "type" : "constant",
+          "value" : true
+        },
+        "label" : {
+          "type" : "interpolation",
+          "value" : ""
+        },
+        "labelPosition" : {
+          "type" : "constant",
+          "value" : "top"
+        },
+        "labelWidth" : {
+          "type" : "constant",
+          "value" : 4
+        }
+      },
+      "reference" : "5c6435b4-22df-4d28-9c17-728fa46038ba",
+      "hasValidationError" : false,
+      "id" : "pbText"
+    } ], [ {
+      "type" : "component",
+      "dimension" : {
+        "xs" : 12
+      },
+      "propertyValues" : {
+        "cssClasses" : {
+          "type" : "constant",
+          "value" : ""
+        },
+        "hidden" : {
+          "type" : "constant",
+          "value" : false
+        },
+        "text" : {
+          "type" : "interpolation",
+          "value" : "Welcome to the Tahiti Vacation Management Tool. Here you can see how many days of vacation you have available, see the status of your vacation requests, and submit a new vacation request."
+        },
+        "alignment" : {
+          "type" : "constant",
+          "value" : "left"
+        },
+        "allowHTML" : {
+          "type" : "constant",
+          "value" : true
+        },
+        "labelHidden" : {
+          "type" : "constant",
+          "value" : true
+        },
+        "label" : {
+          "type" : "interpolation",
+          "value" : ""
+        },
+        "labelPosition" : {
+          "type" : "constant",
+          "value" : "top"
+        },
+        "labelWidth" : {
+          "type" : "constant",
+          "value" : 4
+        }
+      },
+      "reference" : "8c1c905d-5524-423b-80bb-e85d873c3428",
+      "hasValidationError" : false,
+      "id" : "pbText"
+    } ], [ {
+      "type" : "component",
+      "dimension" : {
+        "xs" : 12
+      },
+      "propertyValues" : {
+        "cssClasses" : {
+          "type" : "constant",
+          "value" : ""
+        },
+        "hidden" : {
+          "type" : "expression",
+          "value" : "managerTeamInfo.isManager==false"
+        },
+        "text" : {
+          "type" : "interpolation",
+          "value" : "If you are a manager, you can see the vacation status for your team and review pending requests."
+        },
+        "alignment" : {
+          "type" : "constant",
+          "value" : "left"
+        },
+        "allowHTML" : {
+          "type" : "constant",
+          "value" : true
+        },
+        "labelHidden" : {
+          "type" : "constant",
+          "value" : true
+        },
+        "label" : {
+          "type" : "interpolation",
+          "value" : ""
+        },
+        "labelPosition" : {
+          "type" : "constant",
+          "value" : "top"
+        },
+        "labelWidth" : {
+          "type" : "constant",
+          "value" : 4
+        }
+      },
+      "reference" : "e628edbc-0e8a-4d75-8a21-a5622d30607c",
+      "hasValidationError" : false,
+      "id" : "pbText"
+    } ] ]
+  } ], [ {
+    "type" : "container",
+    "dimension" : {
+      "xs" : 12
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "repeatedCollection" : {
+        "type" : "variable",
+        "value" : ""
+      }
+    },
+    "reference" : "94b54f6b-0527-4510-b43a-f7ba021d4cf9",
+    "hasValidationError" : false,
+    "id" : "pbContainer",
+    "rows" : [ [ {
+      "type" : "component",
+      "dimension" : {
+        "xs" : 4
+      },
+      "propertyValues" : {
+        "cssClasses" : {
+          "type" : "constant",
+          "value" : ""
+        },
+        "hidden" : {
+          "type" : "constant",
+          "value" : false
+        },
+        "text" : {
+          "type" : "interpolation",
+          "value" : "My vacation"
+        },
+        "level" : {
+          "type" : "constant",
+          "value" : "Level 2"
+        },
+        "alignment" : {
+          "type" : "constant",
+          "value" : "left"
+        }
+      },
+      "reference" : "f5892e1c-864e-48a9-8a12-a6ab0771e399",
+      "hasValidationError" : false,
+      "id" : "pbTitle"
+    } ], [ {
+      "type" : "component",
+      "dimension" : {
+        "xs" : 8
+      },
+      "propertyValues" : {
+        "cssClasses" : {
+          "type" : "constant",
+          "value" : ""
+        },
+        "hidden" : {
+          "type" : "constant",
+          "value" : false
+        },
+        "required" : {
+          "type" : "constant",
+          "value" : false
+        },
+        "minLength" : {
+          "type" : "constant",
+          "value" : ""
+        },
+        "maxLength" : {
+          "type" : "constant",
+          "value" : ""
+        },
+        "readOnly" : {
+          "type" : "constant",
+          "value" : true
+        },
+        "labelHidden" : {
+          "type" : "constant",
+          "value" : false
+        },
+        "label" : {
+          "type" : "interpolation",
+          "value" : "Vacation days available"
+        },
+        "labelPosition" : {
+          "type" : "constant",
+          "value" : "left"
+        },
+        "labelWidth" : {
+          "type" : "constant",
+          "value" : 4
+        },
+        "placeholder" : {
+          "type" : "interpolation"
+        },
+        "value" : {
+          "type" : "variable",
+          "value" : "myVacationAvailable[0].daysAvailableCounter"
+        },
+        "type" : {
+          "type" : "constant",
+          "value" : "text"
+        },
+        "min" : {
+          "type" : "constant"
+        },
+        "max" : {
+          "type" : "constant"
+        },
+        "step" : {
+          "type" : "constant",
+          "value" : 1
+        }
+      },
+      "reference" : "a09b3f7b-5895-4ce4-aa37-e2ddb3c3e158",
+      "hasValidationError" : false,
+      "id" : "pbInput"
+    }, {
+      "type" : "component",
+      "dimension" : {
+        "xs" : 4
+      },
+      "propertyValues" : {
+        "cssClasses" : {
+          "type" : "constant",
+          "value" : ""
+        },
+        "hidden" : {
+          "type" : "constant",
+          "value" : false
+        },
+        "text" : {
+          "type" : "interpolation",
+          "value" : "Create new vacation request"
+        },
+        "targetUrl" : {
+          "type" : "expression",
+          "value" : "urlStartCreateProcess"
+        },
+        "alignment" : {
+          "type" : "constant",
+          "value" : "left"
+        },
+        "buttonStyle" : {
+          "type" : "constant",
+          "value" : "primary"
+        },
+        "target" : {
+          "type" : "constant",
+          "value" : "_self"
+        }
+      },
+      "reference" : "6b31c345-a90a-4084-9106-958038ebe0f5",
+      "hasValidationError" : false,
+      "id" : "pbLink"
+    } ], [ {
+      "type" : "component",
+      "dimension" : {
+        "xs" : 12
+      },
+      "propertyValues" : {
+        "cssClasses" : {
+          "type" : "constant",
+          "value" : ""
+        },
+        "hidden" : {
+          "type" : "constant",
+          "value" : false
+        },
+        "headers" : {
+          "type" : "constant",
+          "value" : [ "Start date", "Number of days", "Return date", "Status" ]
+        },
+        "content" : {
+          "type" : "expression",
+          "value" : "myVacation"
+        },
+        "columnsKey" : {
+          "type" : "constant",
+          "value" : [ "startDate | date", "numberOfDays", "returnDate | date", "status" ]
+        },
+        "selectedRow" : {
+          "type" : "variable",
+          "value" : "selectedRow"
+        }
+      },
+      "reference" : "68cda67e-428b-414a-bba9-854a266307d3",
+      "hasValidationError" : false,
+      "id" : "pbTable"
+    } ], [ {
+      "type" : "container",
+      "dimension" : {
+        "xs" : 12
+      },
+      "propertyValues" : {
+        "cssClasses" : {
+          "type" : "constant",
+          "value" : ""
+        },
+        "hidden" : {
+          "type" : "expression",
+          "value" : "!copySelectedRow"
+        },
+        "repeatedCollection" : {
+          "type" : "variable"
+        }
+      },
+      "reference" : "f2810f74-2fd9-4802-8e0f-5c70e3689fbf",
+      "hasValidationError" : false,
+      "id" : "pbContainer",
+      "rows" : [ [ {
+        "type" : "formContainer",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
+        "reference" : "93ff56cb-17c8-4585-8038-7f8daca8e33b",
+        "hasValidationError" : false,
+        "id" : "pbFormContainer",
+        "container" : {
+          "type" : "container",
+          "dimension" : {
+            "xs" : 12
+          },
+          "propertyValues" : { },
+          "reference" : "b3bd722a-e921-4ec6-ac17-2ec58f28889f",
+          "hasValidationError" : false,
+          "id" : "pbContainer",
+          "rows" : [ [ {
+            "type" : "component",
+            "dimension" : {
+              "xs" : 2
+            },
+            "propertyValues" : {
+              "cssClasses" : {
+                "type" : "constant",
+                "value" : ""
+              },
+              "hidden" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "text" : {
+                "type" : "interpolation",
+                "value" : "Selected request:"
+              },
+              "level" : {
+                "type" : "constant",
+                "value" : "Level 5"
+              },
+              "alignment" : {
+                "type" : "constant",
+                "value" : "left"
+              }
+            },
+            "reference" : "88888cea-c9be-4551-8d29-001a6f24af3e",
+            "hasValidationError" : false,
+            "id" : "pbTitle"
+          }, {
+            "type" : "component",
+            "dimension" : {
+              "xs" : 3
+            },
+            "propertyValues" : {
+              "cssClasses" : {
+                "type" : "constant",
+                "value" : ""
+              },
+              "hidden" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "readOnly" : {
+                "type" : "expression",
+                "value" : "copySelectedRow.status!==\"pending\""
+              },
+              "required" : {
+                "type" : "expression",
+                "value" : "copySelectedRow.status===\"pending\""
+              },
+              "labelHidden" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "label" : {
+                "type" : "interpolation",
+                "value" : "Start date"
+              },
+              "labelPosition" : {
+                "type" : "constant",
+                "value" : "top"
+              },
+              "labelWidth" : {
+                "type" : "constant",
+                "value" : 4
+              },
+              "placeholder" : {
+                "type" : "interpolation",
+                "value" : "MM/dd/yyyy"
+              },
+              "value" : {
+                "type" : "variable",
+                "value" : "copySelectedRow.startDate"
+              },
+              "dateFormat" : {
+                "type" : "constant",
+                "value" : "MM/dd/yyyy"
+              },
+              "showToday" : {
+                "type" : "constant",
+                "value" : true
+              }
+            },
+            "reference" : "655f5e84-365c-432d-a502-b08a8db65dd1",
+            "hasValidationError" : false,
+            "id" : "pbDatePicker"
+          }, {
+            "type" : "component",
+            "dimension" : {
+              "xs" : 3
+            },
+            "propertyValues" : {
+              "cssClasses" : {
+                "type" : "constant",
+                "value" : ""
+              },
+              "hidden" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "readOnly" : {
+                "type" : "expression",
+                "value" : "copySelectedRow.status!==\"pending\""
+              },
+              "required" : {
+                "type" : "expression",
+                "value" : "copySelectedRow.status===\"pending\""
+              },
+              "labelHidden" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "label" : {
+                "type" : "interpolation",
+                "value" : "Return date"
+              },
+              "labelPosition" : {
+                "type" : "constant",
+                "value" : "top"
+              },
+              "labelWidth" : {
+                "type" : "constant",
+                "value" : 4
+              },
+              "placeholder" : {
+                "type" : "interpolation",
+                "value" : "MM/dd/yyyy"
+              },
+              "value" : {
+                "type" : "variable",
+                "value" : "copySelectedRow.returnDate"
+              },
+              "dateFormat" : {
+                "type" : "constant",
+                "value" : "MM/dd/yyyy"
+              },
+              "showToday" : {
+                "type" : "constant",
+                "value" : true
+              }
+            },
+            "reference" : "c2f22ea8-067a-41a4-993a-c795d85073f5",
+            "hasValidationError" : false,
+            "id" : "pbDatePicker"
+          }, {
+            "type" : "component",
+            "dimension" : {
+              "xs" : 3
+            },
+            "propertyValues" : {
+              "cssClasses" : {
+                "type" : "constant",
+                "value" : ""
+              },
+              "hidden" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "required" : {
+                "type" : "expression",
+                "value" : "copySelectedRow.status===\"pending\""
+              },
+              "minLength" : {
+                "type" : "constant",
+                "value" : ""
+              },
+              "maxLength" : {
+                "type" : "constant",
+                "value" : ""
+              },
+              "readOnly" : {
+                "type" : "expression",
+                "value" : "copySelectedRow.status!==\"pending\""
+              },
+              "labelHidden" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "label" : {
+                "type" : "interpolation",
+                "value" : "Number of days"
+              },
+              "labelPosition" : {
+                "type" : "constant",
+                "value" : "top"
+              },
+              "labelWidth" : {
+                "type" : "constant",
+                "value" : 4
+              },
+              "placeholder" : {
+                "type" : "interpolation"
+              },
+              "value" : {
+                "type" : "variable",
+                "value" : "copySelectedRow.numberOfDays"
+              },
+              "type" : {
+                "type" : "constant",
+                "value" : "number"
+              },
+              "min" : {
+                "type" : "constant",
+                "value" : 0
+              },
+              "max" : {
+                "type" : "constant"
+              },
+              "step" : {
+                "type" : "constant",
+                "value" : 1
+              }
+            },
+            "reference" : "920f1c8e-a173-45dd-9199-a23a95ce0edd",
+            "hasValidationError" : false,
+            "id" : "pbInput"
+          } ], [ {
+            "type" : "container",
+            "dimension" : {
+              "xs" : 12
+            },
+            "propertyValues" : {
+              "cssClasses" : {
+                "type" : "constant",
+                "value" : ""
+              },
+              "hidden" : {
+                "type" : "expression",
+                "value" : "copySelectedRow.status!==\"pending\""
+              },
+              "repeatedCollection" : {
+                "type" : "variable"
+              }
+            },
+            "reference" : "f1f07c2a-6fc5-4e47-9b26-eeec6e7775ed",
+            "hasValidationError" : false,
+            "id" : "pbContainer",
+            "rows" : [ [ {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 9
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "To modify the selected vacation request, update the details in the Selected request line, and then click <b>Modify selected vacation</b>."
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : ""
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "top"
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 4
+                }
+              },
+              "reference" : "73d6422a-67af-4bda-bddb-3393d70dff4e",
+              "hasValidationError" : false,
+              "id" : "pbText"
+            }, {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 3
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "disabled" : {
+                  "type" : "expression",
+                  "value" : "$form.$invalid"
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : "Modify selected vacation"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                },
+                "buttonStyle" : {
+                  "type" : "constant",
+                  "value" : "default"
+                },
+                "action" : {
+                  "type" : "constant",
+                  "value" : "POST"
+                },
+                "url" : {
+                  "type" : "interpolation",
+                  "value" : "{{urlStartModifyProcess}}"
+                },
+                "dataToSend" : {
+                  "type" : "expression",
+                  "value" : "{\"vacationRequestIdContract\": copySelectedRow.persistenceId_string, \"startDateContract\": copySelectedRow.startDate, \"returnDateContract\": copySelectedRow.returnDate,\"numberOfDaysContract\":copySelectedRow.numberOfDays}"
+                },
+                "dataFromSuccess" : {
+                  "type" : "variable"
+                },
+                "dataFromError" : {
+                  "type" : "variable"
+                },
+                "targetUrlOnSuccess" : {
+                  "type" : "interpolation",
+                  "value" : "/bonita/apps/tahiti/index/"
+                },
+                "collectionToModify" : {
+                  "type" : "variable"
+                },
+                "collectionPosition" : {
+                  "type" : "constant",
+                  "value" : "Last"
+                },
+                "valueToAdd" : {
+                  "type" : "constant"
+                },
+                "removeItem" : {
+                  "type" : "variable"
+                }
+              },
+              "reference" : "ade9256c-1c87-4b46-95ec-93235d5789a1",
+              "hasValidationError" : false,
+              "id" : "pbButton"
+            } ] ]
+          } ] ]
+        }
+      } ], [ {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "!(copySelectedRow && copySelectedRow.status===\"pending\" || copySelectedRow.status===\"approved\")"
+          },
+          "repeatedCollection" : {
+            "type" : "variable"
+          }
+        },
+        "reference" : "97cd93fa-d7e6-4deb-99bb-cd75bb1ab32f",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [ [ {
+          "type" : "component",
+          "dimension" : {
+            "xs" : 9
+          },
+          "propertyValues" : {
+            "cssClasses" : {
+              "type" : "constant",
+              "value" : ""
+            },
+            "hidden" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "text" : {
+              "type" : "interpolation",
+              "value" : "To cancel the selected vacation request, click <b>Cancel selected vacation</b>. If the request is already approved, a cancellation request will be sent to your manager."
+            },
+            "alignment" : {
+              "type" : "constant",
+              "value" : "left"
+            },
+            "allowHTML" : {
+              "type" : "constant",
+              "value" : true
+            },
+            "labelHidden" : {
+              "type" : "constant",
+              "value" : true
+            },
+            "label" : {
+              "type" : "interpolation",
+              "value" : ""
+            },
+            "labelPosition" : {
+              "type" : "constant",
+              "value" : "top"
+            },
+            "labelWidth" : {
+              "type" : "constant",
+              "value" : 4
+            }
+          },
+          "reference" : "cde88b51-8e6e-4d9e-9997-17ee08ef570f",
+          "hasValidationError" : false,
+          "id" : "pbText"
+        }, {
+          "type" : "component",
+          "dimension" : {
+            "xs" : 3
+          },
+          "propertyValues" : {
+            "cssClasses" : {
+              "type" : "constant",
+              "value" : ""
+            },
+            "hidden" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "disabled" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "label" : {
+              "type" : "interpolation",
+              "value" : "Cancel selected vacation"
+            },
+            "alignment" : {
+              "type" : "constant",
+              "value" : "left"
+            },
+            "buttonStyle" : {
+              "type" : "constant",
+              "value" : "default"
+            },
+            "action" : {
+              "type" : "constant",
+              "value" : "POST"
+            },
+            "url" : {
+              "type" : "interpolation",
+              "value" : "{{urlStartCancelProcess}}"
+            },
+            "dataToSend" : {
+              "type" : "expression",
+              "value" : "{\"vacationRequestIdContract\": copySelectedRow.persistenceId_string}"
+            },
+            "dataFromSuccess" : {
+              "type" : "variable"
+            },
+            "dataFromError" : {
+              "type" : "variable"
+            },
+            "targetUrlOnSuccess" : {
+              "type" : "interpolation",
+              "value" : "/bonita/apps/tahiti/index/"
+            },
+            "collectionToModify" : {
+              "type" : "variable"
+            },
+            "collectionPosition" : {
+              "type" : "constant",
+              "value" : "Last"
+            },
+            "valueToAdd" : {
+              "type" : "constant"
+            },
+            "removeItem" : {
+              "type" : "variable"
+            }
+          },
+          "reference" : "fe6bb6a2-9f17-42c8-8284-7b6d3dfa7f49",
+          "hasValidationError" : false,
+          "id" : "pbButton"
+        } ] ]
+      } ] ]
+    } ] ]
+  } ], [ {
+    "type" : "container",
+    "dimension" : {
+      "xs" : 12
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "expression",
+        "value" : "managerTeamInfo.isManager==false"
+      },
+      "repeatedCollection" : {
+        "type" : "variable",
+        "value" : ""
+      }
+    },
+    "reference" : "797d1ac4-f54b-4f1b-adcf-4bfb10e60d67",
+    "hasValidationError" : false,
+    "id" : "pbContainer",
+    "rows" : [ [ {
+      "type" : "component",
+      "dimension" : {
+        "xs" : 12
+      },
+      "propertyValues" : {
+        "cssClasses" : {
+          "type" : "constant",
+          "value" : ""
+        },
+        "hidden" : {
+          "type" : "constant",
+          "value" : false
+        },
+        "text" : {
+          "type" : "interpolation",
+          "value" : "Team vacation"
+        },
+        "level" : {
+          "type" : "constant",
+          "value" : "Level 2"
+        },
+        "alignment" : {
+          "type" : "constant",
+          "value" : "left"
+        }
+      },
+      "reference" : "e11a6780-9d5e-41cc-b9bd-8da41766de75",
+      "hasValidationError" : false,
+      "id" : "pbTitle"
+    } ], [ {
+      "type" : "tabsContainer",
+      "dimension" : {
+        "xs" : 12
+      },
+      "propertyValues" : {
+        "cssClasses" : {
+          "type" : "constant",
+          "value" : ""
+        },
+        "hidden" : {
+          "type" : "constant",
+          "value" : false
+        }
+      },
+      "reference" : "98652718-621f-4189-b156-f4137b708dde",
+      "hasValidationError" : false,
+      "id" : "pbTabsContainer",
+      "tabs" : [ {
+        "container" : {
+          "type" : "container",
+          "dimension" : {
+            "xs" : 12
+          },
+          "propertyValues" : {
+            "cssClasses" : {
+              "type" : "constant",
+              "value" : ""
+            },
+            "hidden" : {
+              "type" : "constant",
+              "value" : false
+            }
+          },
+          "reference" : "521b2d03-7eff-4991-8149-d40153a8eaf0",
+          "hasValidationError" : false,
+          "id" : "pbContainer",
+          "rows" : [ [ {
+            "type" : "component",
+            "dimension" : {
+              "xs" : 12
+            },
+            "propertyValues" : {
+              "cssClasses" : {
+                "type" : "constant",
+                "value" : ""
+              },
+              "hidden" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "headers" : {
+                "type" : "constant",
+                "value" : [ "First name", "Last name", "Days available" ]
+              },
+              "content" : {
+                "type" : "expression",
+                "value" : "managerTeamInfo.employeesVacationAvailable"
+              },
+              "columnsKey" : {
+                "type" : "constant",
+                "value" : [ "firstName", "lastName", "daysAvailableCounter" ]
+              },
+              "selectedRow" : {
+                "type" : "variable"
+              }
+            },
+            "reference" : "601c110a-8c1f-486f-af3f-d0ca52e36074",
+            "hasValidationError" : false,
+            "id" : "pbTable"
+          } ] ]
+        },
+        "title" : "Vacation available"
+      }, {
+        "container" : {
+          "type" : "container",
+          "dimension" : {
+            "xs" : 12
+          },
+          "propertyValues" : {
+            "cssClasses" : {
+              "type" : "constant",
+              "value" : ""
+            },
+            "hidden" : {
+              "type" : "constant",
+              "value" : false
+            }
+          },
+          "reference" : "f575b005-8b8f-4c91-a43b-6317cb79fc2e",
+          "hasValidationError" : false,
+          "id" : "pbContainer",
+          "rows" : [ [ {
+            "type" : "component",
+            "dimension" : {
+              "xs" : 12
+            },
+            "propertyValues" : {
+              "cssClasses" : {
+                "type" : "constant",
+                "value" : ""
+              },
+              "hidden" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "headers" : {
+                "type" : "constant",
+                "value" : [ "First name", "Last name", "Start date", "Number of days", "Return date", "Status" ]
+              },
+              "content" : {
+                "type" : "expression",
+                "value" : "managerTeamInfo.employeesVacationRequests"
+              },
+              "columnsKey" : {
+                "type" : "constant",
+                "value" : [ "firstName", "lastName", "startDate | date", "numberOfDays", "returnDate | date", "status" ]
+              },
+              "selectedRow" : {
+                "type" : "variable",
+                "value" : "teamSelectedRow"
+              }
+            },
+            "reference" : "2fecdd1f-159b-40fa-8319-1d9a6d45b7eb",
+            "hasValidationError" : false,
+            "id" : "pbTable"
+          } ], [ {
+            "type" : "component",
+            "dimension" : {
+              "xs" : 12
+            },
+            "propertyValues" : {
+              "cssClasses" : {
+                "type" : "constant",
+                "value" : ""
+              },
+              "hidden" : {
+                "type" : "expression",
+                "value" : "teamSelectedRow.status!==\"pending\""
+              },
+              "text" : {
+                "type" : "interpolation",
+                "value" : "Review selected vacation request"
+              },
+              "targetUrl" : {
+                "type" : "expression",
+                "value" : "'/bonita/portal/form/taskInstance/' + teamSelectedRow.taskId"
+              },
+              "alignment" : {
+                "type" : "constant",
+                "value" : "center"
+              },
+              "buttonStyle" : {
+                "type" : "constant",
+                "value" : "primary"
+              },
+              "target" : {
+                "type" : "constant",
+                "value" : "_self"
+              }
+            },
+            "reference" : "8862ee98-4535-4ba6-8f4f-592ba441bcfd",
+            "hasValidationError" : false,
+            "id" : "pbLink"
+          } ] ]
+        },
+        "title" : "Vacation requests"
+      } ]
+    } ] ]
+  } ] ],
+  "assets" : [ {
+    "id" : "1055f091-2ed5-4dbf-98c4-31bb7f58ac0d",
+    "name" : "style.css",
+    "type" : "css",
+    "order" : 2,
+    "external" : false
+  }, {
+    "id" : "0aa136c8-d1b8-4c3f-8666-b44328a56ec5",
+    "name" : "logo.png",
+    "type" : "img",
+    "order" : 1,
+    "external" : false
+  } ],
+  "inactiveAssets" : [ ],
+  "data" : {
+    "myVacationAvailable" : {
+      "type" : "url",
+      "value" : "../API/bdm/businessData/com.company.model.VacationAvailable?q=findByBonitaUserId&p=0&c=1&f=bonitaUserId={{session.user_id}}",
+      "exposed" : false
+    },
+    "myVacation" : {
+      "type" : "url",
+      "value" : "../API/bdm/businessData/com.company.model.VacationRequest?q=findByRequesterBonitaUserId&p=0&c=100&f=requesterBonitaUserId={{session.user_id}}",
+      "exposed" : false
+    },
+    "selectedRow" : {
+      "type" : "json",
+      "value" : "{}",
+      "exposed" : false
+    },
+    "copySelectedRow" : {
+      "type" : "expression",
+      "value" : "// We need to create a copy of the selected row in order to be able \n// to edit selected vacation request while kepping the orginal\n// content in the table.\nif($data.selectedRow && !angular.equals({}, $data.selectedRow)) {\n    return angular.copy($data.selectedRow);\n} else {\n    return null;\n}",
+      "exposed" : false
+    },
+    "managerTeamInfo" : {
+      "type" : "url",
+      "value" : "../API/extension/vacationRequest",
+      "exposed" : false
+    },
+    "teamSelectedRow" : {
+      "type" : "json",
+      "value" : "{}",
+      "exposed" : false
+    },
+    "session" : {
+      "type" : "url",
+      "value" : "../API/system/session/1",
+      "exposed" : false
+    },
+    "processCreate" : {
+      "type" : "url",
+      "value" : "../API/bpm/process?s=New Vacation Request&p=0&c=1&o=version%20DESC&f=activationState=ENABLED",
+      "exposed" : false
+    },
+    "urlStartCreateProcess" : {
+      "type" : "expression",
+      "value" : "// Return the URL to the new vacation request process\r\n// instantiation form\r\nif ($data.processCreate &&\r\n    $data.processCreate.length > 0) {\r\n  return \"/bonita/portal/resource/process/\" +\r\n    $data.processCreate[0].name +\r\n    \"/\"+$data.processCreate[0].version +\r\n    \"/content/?id=\" +\r\n    $data.processCreate[0].id;\r\n} else {\r\n  return null;\r\n}",
+      "exposed" : false
+    },
+    "processModify" : {
+      "type" : "url",
+      "value" : "../API/bpm/process?s=Modify Pending Vacation Request &p=0&c=1&o=version%20DESC&f=activationState=ENABLED",
+      "exposed" : false
+    },
+    "urlStartModifyProcess" : {
+      "type" : "expression",
+      "value" : "// Return the API URL to instantiate the modify vacation request\r\n// process\r\nif ($data.processModify  && $data.processModify.length > 0) {\r\n  return \"../API/bpm/process/\" +\r\n    $data.processModify[0].id +\r\n    \"/instantiation\";\r\n} else {\r\n  return null;\r\n}",
+      "exposed" : false
+    },
+    "processCancel" : {
+      "type" : "url",
+      "value" : "../API/bpm/process?s=Cancel Vacation Request&p=0&c=1&o=version%20DESC&f=activationState=ENABLED",
+      "exposed" : false
+    },
+    "urlStartCancelProcess" : {
+      "type" : "expression",
+      "value" : "// Return the API URL to instantiate the cancel vacation request\r\n// process\r\nif ($data.processCancel  && $data.processCancel.length > 0) {\r\n  return \"../API/bpm/process/\" +\r\n    $data.processCancel[0].id +\r\n    \"/instantiation\";\r\n} else {\r\n  return null;\r\n}",
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "uuid" : "115e20c0-3948-4130-8d17-5a9a8c10784b",
+  "type" : "page",
+  "description" : "Page generated with Bonita UI designer"
+}

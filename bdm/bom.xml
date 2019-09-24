@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<businessObjectModel modelVersion="1.0" productVersion="7.3.0">
+    <businessObjects>
+        <businessObject qualifiedName="com.company.model.VacationRequest">
+            <description>An employee vacation request.&#xD;
+Possible status values are: pending, approved, refused, processing cancellation and cancelled.</description>
+            <fields>
+                <field type="LONG" length="255" name="requesterBonitaUserId" nullable="false" collection="false"/>
+                <field type="LONG" length="255" name="reviewerBonitaUserId" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="startDate" nullable="false" collection="false"/>
+                <field type="LOCALDATE" length="255" name="returnDate" nullable="false" collection="false"/>
+                <field type="INTEGER" length="255" name="numberOfDays" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="status" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="comments" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="calendarEventId" nullable="true" collection="false"/>
+                <field type="LONG" length="255" name="newRequestProcessInstanceId" nullable="false" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries>
+                <query name="findModifiableByBonitaUserId" content="SELECT l &#xA;FROM VacationRequest l &#xA;WHERE l.requesterBonitaUserId = :requesterBonitaUserId&#xA;AND l.startDate &gt; CURRENT_DATE&#xA;AND l.status IN('pending')&#xA;ORDER BY l.startDate ASC" returnType="java.util.List">
+                    <queryParameters>
+                        <queryParameter name="requesterBonitaUserId" className="java.lang.Long"/>
+                    </queryParameters>
+                </query>
+                <query name="findCancellableByBonitaUserId" content="SELECT l &#xA;FROM VacationRequest l &#xA;WHERE l.requesterBonitaUserId = :requesterBonitaUserId&#xA;AND l.status IN('pending', 'approved')&#xA;ORDER BY l.startDate ASC" returnType="java.util.List">
+                    <queryParameters>
+                        <queryParameter name="requesterBonitaUserId" className="java.lang.Long"/>
+                    </queryParameters>
+                </query>
+            </queries>
+            <indexes>
+                <index name="INDEX_1">
+                    <fieldNames>
+                        <fieldName>requesterBonitaUserId</fieldName>
+                    </fieldNames>
+                </index>
+                <index name="INDEX_2">
+                    <fieldNames>
+                        <fieldName>status</fieldName>
+                        <fieldName>requesterBonitaUserId</fieldName>
+                    </fieldNames>
+                </index>
+                <index name="INDEX_3">
+                    <fieldNames>
+                        <fieldName>status</fieldName>
+                        <fieldName>startDate</fieldName>
+                        <fieldName>requesterBonitaUserId</fieldName>
+                    </fieldNames>
+                </index>
+            </indexes>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.VacationAvailable">
+            <description>The number of vacation days available to the specified employee.</description>
+            <fields>
+                <field type="LONG" length="255" name="bonitaUserId" nullable="false" collection="false"/>
+                <field type="INTEGER" length="255" name="daysAvailableCounter" nullable="false" collection="false"/>
+            </fields>
+            <uniqueConstraints>
+                <uniqueConstraint name="uniqueBonitaUserId">
+                    <fieldNames>
+                        <fieldName>bonitaUserId</fieldName>
+                    </fieldNames>
+                </uniqueConstraint>
+            </uniqueConstraints>
+            <queries/>
+            <indexes>
+                <index name="INDEX_BONITA_USER_ID">
+                    <fieldNames>
+                        <fieldName>bonitaUserId</fieldName>
+                    </fieldNames>
+                </index>
+            </indexes>
+        </businessObject>
+    </businessObjects>
+</businessObjectModel>

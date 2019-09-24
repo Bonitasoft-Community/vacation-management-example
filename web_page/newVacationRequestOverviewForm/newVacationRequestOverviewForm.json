@@ -1,0 +1,660 @@
+{
+  "designerVersion" : "1.9.24",
+  "previousDesignerVersion" : "1.8.29",
+  "id" : "newVacationRequestOverviewForm",
+  "name" : "newVacationRequestOverviewForm",
+  "lastUpdate" : 1568900429626,
+  "rows" : [ [ {
+    "type" : "container",
+    "dimension" : {
+      "xs" : 12,
+      "sm" : 12,
+      "md" : 12,
+      "lg" : 12
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "expression",
+        "value" : "!caseOverview.found"
+      },
+      "repeatedCollection" : {
+        "type" : "variable",
+        "value" : ""
+      }
+    },
+    "reference" : "fc41a356-8998-452a-9ba6-d0461c025697",
+    "hasValidationError" : false,
+    "id" : "pbContainer",
+    "rows" : [ [ {
+      "type" : "component",
+      "dimension" : {
+        "xs" : 12,
+        "sm" : 12,
+        "md" : 12,
+        "lg" : 12
+      },
+      "propertyValues" : {
+        "cssClasses" : {
+          "type" : "constant",
+          "value" : ""
+        },
+        "hidden" : {
+          "type" : "constant",
+          "value" : false
+        },
+        "text" : {
+          "type" : "interpolation",
+          "value" : "{{\"Case id\" | translate}} : {{caseOverview.sourceObjectId || caseOverview.id}} - {{\"Process\" | translate}} : {{caseOverview.processName}}"
+        },
+        "level" : {
+          "type" : "constant",
+          "value" : "Level 1"
+        },
+        "alignment" : {
+          "type" : "constant",
+          "value" : "left"
+        }
+      },
+      "reference" : "e42cf1f2-ba06-44f3-85f3-2b5df2165019",
+      "hasValidationError" : false,
+      "id" : "pbTitle"
+    } ], [ {
+      "type" : "component",
+      "dimension" : {
+        "xs" : 12,
+        "sm" : 12,
+        "md" : 12,
+        "lg" : 12
+      },
+      "propertyValues" : {
+        "cssClasses" : {
+          "type" : "constant",
+          "value" : ""
+        },
+        "hidden" : {
+          "type" : "expression",
+          "value" : "!archivedCase.length"
+        },
+        "text" : {
+          "type" : "interpolation",
+          "value" : "{{\"Archived case id\" | translate}} : {{caseOverview.id}}"
+        },
+        "level" : {
+          "type" : "constant",
+          "value" : "Level 3"
+        },
+        "alignment" : {
+          "type" : "constant",
+          "value" : "left"
+        }
+      },
+      "reference" : "ac4373f2-99a4-4dde-9ec7-7420b332bd7b",
+      "hasValidationError" : false,
+      "id" : "pbTitle"
+    } ], [ {
+      "type" : "component",
+      "dimension" : {
+        "xs" : 12,
+        "sm" : 12,
+        "md" : 12,
+        "lg" : 12
+      },
+      "propertyValues" : {
+        "cssClasses" : {
+          "type" : "constant",
+          "value" : ""
+        },
+        "hidden" : {
+          "type" : "constant",
+          "value" : false
+        },
+        "text" : {
+          "type" : "interpolation",
+          "value" : "<h2><span class=\"glyphicon glyphicon-folder-open\" aria-hidden=\"true\"></span>&nbsp; {{\"Business Data\" | translate}}</h2>"
+        },
+        "alignment" : {
+          "type" : "constant",
+          "value" : "left"
+        },
+        "allowHTML" : {
+          "type" : "constant",
+          "value" : true
+        },
+        "labelHidden" : {
+          "type" : "constant",
+          "value" : true
+        },
+        "label" : {
+          "type" : "interpolation",
+          "value" : ""
+        },
+        "labelPosition" : {
+          "type" : "constant",
+          "value" : "top"
+        },
+        "labelWidth" : {
+          "type" : "constant",
+          "value" : 4
+        }
+      },
+      "reference" : "b3296a56-0223-423c-a701-e4a120a7f51a",
+      "hasValidationError" : false,
+      "id" : "pbText"
+    } ], [ {
+      "type" : "container",
+      "dimension" : {
+        "xs" : 12,
+        "sm" : 12,
+        "md" : 12,
+        "lg" : 12
+      },
+      "propertyValues" : {
+        "cssClasses" : {
+          "type" : "constant",
+          "value" : ""
+        },
+        "hidden" : {
+          "type" : "expression",
+          "value" : "caseOverview.businessDataRefs.length  > 0"
+        },
+        "repeatedCollection" : {
+          "type" : "variable",
+          "value" : ""
+        }
+      },
+      "reference" : "91aa69b7-40d4-4efe-91f1-3b0cc5905dce",
+      "hasValidationError" : false,
+      "id" : "pbContainer",
+      "rows" : [ [ {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "text" : {
+            "type" : "interpolation",
+            "value" : "<div class=\"alert alert-info\"><i class=\"glyphicon glyphicon-info-sign\" aria-hidden=\"true\"></i> {{\"No business data available\" | translate }}</div>"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "left"
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : ""
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "top"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 4
+          }
+        },
+        "reference" : "897d91e3-4c78-4a0c-a250-d0ecdadf7d39",
+        "hasValidationError" : false,
+        "id" : "pbText"
+      } ] ]
+    } ], [ {
+      "type" : "container",
+      "dimension" : {
+        "xs" : 12,
+        "sm" : 12,
+        "md" : 12,
+        "lg" : 12
+      },
+      "propertyValues" : {
+        "cssClasses" : {
+          "type" : "constant",
+          "value" : ""
+        },
+        "hidden" : {
+          "type" : "expression",
+          "value" : "caseOverview.businessDataRefs.length === 0"
+        },
+        "repeatedCollection" : {
+          "type" : "variable",
+          "value" : ""
+        }
+      },
+      "reference" : "1c1c80a1-d0eb-4f30-bcfe-1098085a0040",
+      "hasValidationError" : false,
+      "id" : "pbContainer",
+      "rows" : [ [ {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 6,
+          "lg" : 6
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "disabled" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "required" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "List of"
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "left"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 1
+          },
+          "placeholder" : {
+            "type" : "interpolation",
+            "value" : ""
+          },
+          "availableValues" : {
+            "type" : "expression",
+            "value" : "caseOverview.businessDataRefs"
+          },
+          "displayedKey" : {
+            "type" : "constant",
+            "value" : "name"
+          },
+          "returnedKey" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "value" : {
+            "type" : "variable",
+            "value" : "caseOverview.selectedBusinessDataRef"
+          }
+        },
+        "reference" : "3b5b7ed7-ad8a-44fc-a3c6-b4cb063c5e2d",
+        "hasValidationError" : false,
+        "id" : "pbSelect"
+      } ], [ {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "!businessDataKeys"
+          },
+          "headers" : {
+            "type" : "expression",
+            "value" : "businessDataKeys"
+          },
+          "content" : {
+            "type" : "expression",
+            "value" : "selectedBusinessData.length ? selectedBusinessData : [selectedBusinessData]"
+          },
+          "columnsKey" : {
+            "type" : "expression",
+            "value" : "businessDataKeys"
+          },
+          "selectedRow" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "2161bfa5-d310-4c9a-ba3a-d7e4f79d2be0",
+        "hasValidationError" : false,
+        "id" : "pbTable"
+      } ] ]
+    } ], [ {
+      "type" : "component",
+      "dimension" : {
+        "xs" : 12,
+        "sm" : 12,
+        "md" : 12,
+        "lg" : 12
+      },
+      "propertyValues" : {
+        "cssClasses" : {
+          "type" : "constant",
+          "value" : ""
+        },
+        "hidden" : {
+          "type" : "constant",
+          "value" : false
+        },
+        "text" : {
+          "type" : "interpolation",
+          "value" : "<h2><span class=\"glyphicon glyphicon-object-align-right\" aria-hidden=\"true\"></span>&nbsp; {{\"Timeline\" | translate }}</h2>"
+        },
+        "alignment" : {
+          "type" : "constant",
+          "value" : "left"
+        },
+        "allowHTML" : {
+          "type" : "constant",
+          "value" : true
+        },
+        "labelHidden" : {
+          "type" : "constant",
+          "value" : true
+        },
+        "label" : {
+          "type" : "interpolation",
+          "value" : ""
+        },
+        "labelPosition" : {
+          "type" : "constant",
+          "value" : "top"
+        },
+        "labelWidth" : {
+          "type" : "constant",
+          "value" : 4
+        }
+      },
+      "reference" : "de35d1f4-89c8-4c75-84ca-40fb651481f7",
+      "hasValidationError" : false,
+      "id" : "pbText"
+    } ], [ {
+      "type" : "component",
+      "dimension" : {
+        "xs" : 12,
+        "sm" : 12,
+        "md" : 12,
+        "lg" : 12
+      },
+      "propertyValues" : {
+        "cssClasses" : {
+          "type" : "constant",
+          "value" : ""
+        },
+        "hidden" : {
+          "type" : "constant",
+          "value" : false
+        },
+        "events" : {
+          "type" : "expression",
+          "value" : "timelineEvents"
+        },
+        "noEventsTitle" : {
+          "type" : "expression",
+          "value" : "\"No Events yet.\" | translate"
+        },
+        "noEventsContent" : {
+          "type" : "expression",
+          "value" : "\"Nothing noticeable happened yet... But it surely will come!\" | translate"
+        },
+        "eventsTitleExpression" : {
+          "type" : "constant",
+          "value" : "event.title"
+        },
+        "eventsContentExpression" : {
+          "type" : "constant",
+          "value" : "event.description"
+        },
+        "eventsTimeExpression" : {
+          "type" : "constant",
+          "value" : "event.lastUpdateDate"
+        },
+        "eventsTimeAttributeFormat" : {
+          "type" : "constant",
+          "value" : "medium"
+        },
+        "eventsAuthorExpression" : {
+          "type" : "constant",
+          "value" : "event.executedBy || event.assignedTo"
+        },
+        "origin" : {
+          "type" : "expression",
+          "value" : "timelineOrigin"
+        },
+        "originTitleExpression" : {
+          "type" : "constant",
+          "value" : "origin.title | translate"
+        },
+        "originContentExpression" : {
+          "type" : "constant",
+          "value" : "origin.description"
+        },
+        "originTimeExpression" : {
+          "type" : "constant",
+          "value" : "origin.startTime"
+        },
+        "originAuthorExpression" : {
+          "type" : "constant",
+          "value" : "origin.initiator"
+        },
+        "eventsIconStyleExpression" : {
+          "type" : "expression",
+          "value" : "\"event.style\""
+        },
+        "eventsIconExpression" : {
+          "type" : "constant",
+          "value" : "event.icon"
+        }
+      },
+      "reference" : "a51d8918-bd2b-41a9-9526-c2b8377ec655",
+      "hasValidationError" : false,
+      "id" : "timelineWidget"
+    } ] ]
+  } ], [ {
+    "type" : "container",
+    "dimension" : {
+      "xs" : 12,
+      "sm" : 12,
+      "md" : 12,
+      "lg" : 12
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "expression",
+        "value" : "caseOverview.found"
+      },
+      "repeatedCollection" : {
+        "type" : "variable",
+        "value" : ""
+      }
+    },
+    "reference" : "b2e49c49-3849-4965-a368-a1797c166c76",
+    "hasValidationError" : false,
+    "id" : "pbContainer",
+    "rows" : [ [ {
+      "type" : "component",
+      "dimension" : {
+        "xs" : 12,
+        "sm" : 12,
+        "md" : 12,
+        "lg" : 12
+      },
+      "propertyValues" : {
+        "cssClasses" : {
+          "type" : "constant",
+          "value" : ""
+        },
+        "hidden" : {
+          "type" : "constant",
+          "value" : false
+        },
+        "text" : {
+          "type" : "interpolation",
+          "value" : "<div class=\"alert alert-danger\" translate><i class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></i> {{\"No case found with id:\" | translate }}  <b>{{caseOverview.id}}</b></div>"
+        },
+        "alignment" : {
+          "type" : "constant",
+          "value" : "left"
+        },
+        "allowHTML" : {
+          "type" : "constant",
+          "value" : true
+        },
+        "labelHidden" : {
+          "type" : "constant",
+          "value" : true
+        },
+        "label" : {
+          "type" : "interpolation",
+          "value" : ""
+        },
+        "labelPosition" : {
+          "type" : "constant",
+          "value" : "top"
+        },
+        "labelWidth" : {
+          "type" : "constant",
+          "value" : 4
+        }
+      },
+      "reference" : "25414521-3c21-4d7e-83dd-c50103b09657",
+      "hasValidationError" : false,
+      "id" : "pbText"
+    } ] ]
+  } ] ],
+  "assets" : [ {
+    "id" : "f825ddd9-ee07-47ff-97ca-e4b87c103019",
+    "name" : "filters.js",
+    "type" : "js",
+    "order" : 4,
+    "external" : false
+  }, {
+    "id" : "3cc03bf1-08db-4d42-8292-b68a04de5244",
+    "name" : "moment.min.js",
+    "type" : "js",
+    "order" : 3,
+    "external" : false
+  }, {
+    "id" : "2551933a-6d9e-44ec-a941-1fa2062d3693",
+    "name" : "localization.json",
+    "type" : "json",
+    "order" : 0,
+    "external" : false
+  }, {
+    "id" : "5c01a8a7-018a-4297-a4db-f4b5fd46dd81",
+    "name" : "style.css",
+    "type" : "css",
+    "order" : 1,
+    "external" : false
+  } ],
+  "inactiveAssets" : [ ],
+  "data" : {
+    "openCase" : {
+      "type" : "url",
+      "value" : "../API/bpm/case/{{caseId}}?d=started_by&d=processDefinitionId",
+      "exposed" : false
+    },
+    "archivedCase" : {
+      "type" : "url",
+      "value" : "../API/bpm/archivedCase?c=1&d=started_by&d=processDefinitionId&f=sourceObjectId%3D{{caseId}}&p=0",
+      "exposed" : false
+    },
+    "caseId" : {
+      "type" : "urlparameter",
+      "value" : "id",
+      "exposed" : false
+    },
+    "caseOverview" : {
+      "type" : "expression",
+      "value" : "function values(object){\n    if(!object){\n        return [];\n    }\n    return  Object.keys(object).map(function(key){\n        return $data.context[key];\n    });    \n}\n\nfunction groupBy(xs, key) {\n  var result = xs.reduce(function(rv, x) {\n    (rv[x[key]] = rv[x[key]] || []).push(x);\n    return rv;\n  }, {});\n  return result ? Object.keys(result).map(function(key) { return { \"name\" : key, \"description\" : result[key] && result[key].length > 0 ? result[key][0].description : null  , \"documents\" : Array.isArray(result[key]) ?  result[key] : [ result[key]] }}) : [];\n}\n\n\nfunction maxValue(xs, key) {\n  return xs.reduce(function(prev, current) {\n       return (parseInt(prev[key],10) > parseInt(current[key],10)) ? prev : current;\n  });\n}\n\nvar businessDataRefs =  values($data.context).filter(function(ref){\n        return ref && ref.type;\n    }).map(function(businessDataRef){\n        return {\n          \"name\" : businessDataRef.name + \" (\"+ businessDataRef.type +\")\",\n          \"link\" : businessDataRef.link\n        };\n    });\n\nvar documentRefs = groupBy($data.openedContext ? $data.openedCaseDocuments : $data.archivedDocuments,\"name\");\nfor(var index = 0; index < documentRefs.length; index++){\n          var doc = documentRefs[index];\n          var allVersionsById = groupBy(doc.documents, $data.openedContext ? \"id\" : \"sourceObjectId\");\n          for(var j = 0; j < allVersionsById.length; j++){\n                allVersionsById[j] = maxValue(allVersionsById[j].documents,\"version\");\n          }\n          doc.documents  = Object.values(allVersionsById);\n          if(doc.name + \"_ref\" in $data.context){\n              var contextDocs = $data.context[doc.name + \"_ref\"];\n              //Do not display removed docs form a multiple document\n              if(contextDocs && Array.isArray(contextDocs)){\n                  var docIdInContext = contextDocs.map(function(d) { return d.id.toString(); });\n                  doc.documents = doc.documents.filter(function(d) { return docIdInContext.includes(d.sourceObjectId ? d.sourceObjectId : d.id); });\n              }else if(!contextDocs){\n                  doc.documents = [];\n              }\n          }\n }\n\nreturn {\n    \"found\" : !!$data.case,\n    \"id\" : $data.case.id,\n    \"sourceObjectId\" : $data.case.rootCaseId ?  $data.case.rootCaseId  : $data.case.id ,\n    \"processName\" : $data.case.processDefinitionId.displayName + \" (\"+ $data.case.processDefinitionId.version+\")\",\n    \"businessDataRefs\" : businessDataRefs,\n    \"selectedBusinessDataRef\" : businessDataRefs[0],\n    \"documentRefs\" : documentRefs \n};",
+      "exposed" : false
+    },
+    "selectedBusinessData" : {
+      "type" : "url",
+      "value" : "../{{caseOverview.selectedBusinessDataRef.link}}",
+      "exposed" : false
+    },
+    "case" : {
+      "type" : "expression",
+      "value" : "return  (!$data.openCase && $data.archivedCase.length > 0) ? $data.archivedCase[0] : $data.openCase;",
+      "exposed" : false
+    },
+    "businessDataKeys" : {
+      "type" : "expression",
+      "value" : "/* Identifies if the passed key is a string version of an object id,\n * as the Rest API duplicates the object ids with \"_string\" version\n */\nfunction isOjectIdAsString(header, headers) {\n    return header.endsWith(\"_string\") && headers.includes(header.replace(\"_string\", \"\"));\n}\n\nvar businessData = $data.selectedBusinessData.length ? $data.selectedBusinessData[0] :  $data.selectedBusinessData;\n\nreturn Object.keys(businessData).filter(function(header, index, headers){\n    return  !isOjectIdAsString(header, headers);\n}).filter(function(header){\n    return  header !== \"persistenceId\"\n            && header.indexOf(\"persistenceVersion\") === -1 \n            && header !== \"links\" \n});",
+      "exposed" : false
+    },
+    "archivedTasks" : {
+      "type" : "url",
+      "value" : "../API/bpm/archivedHumanTask?p=0&c=999&d=executedBy&f=caseId%3D{{caseOverview.sourceObjectId}}&o=reached_state_date DESC",
+      "exposed" : false
+    },
+    "timelineEvents" : {
+      "type" : "expression",
+      "value" : "function executedBy(task){\n    return \"completed\" === task.state ? \"Executed by \" + task.executedBy.firstname + \" \" + task.executedBy.lastname : null;\n}\n\nfunction assignedTo(task){\n    return task.assigned_id ? \"Assigned to \" +  task.assigned_id.firstname + \" \" +  task.assigned_id.lastname : null;\n}\n\nfunction iconFor(task){\n    switch(task.state) {\n        case \"completed\": return \"check\";\n        case \"failed\": return \"remove-circle\";\n        case \"cancelled\": return \"ban-circle\";\n        case \"aborted\": return \"ban-circle\";\n        default: return \"unchecked\";\n    }\n}\n\nfunction styleFor(task){\n    switch(task.state) {\n        case \"completed\": return \"success\";\n        case \"failed\": return \"danger\";\n        case \"cancelled\": return \"warning\";\n        case \"aborted\": return \"warning\";\n        default: return \"primary\";\n    }\n}\n\nfunction toEvent(task){\n    return {\n      \"title\" : task.displayName,\n      \"lastUpdateDate\" : task.last_update_date,\n      \"executedBy\" :  executedBy(task),\n      \"assignedTo\" : assignedTo(task),\n      \"description\" : task.displayDescription,\n      \"icon\" : iconFor(task),\n      \"style\" : styleFor(task)\n    };\n}\n\nvar archived = $data.archivedTasks.map(toEvent);\nvar opened = $data.openedTasks.map(toEvent);\n\nreturn [].concat(opened,archived);",
+      "exposed" : false
+    },
+    "timelineOrigin" : {
+      "type" : "expression",
+      "value" : "return {\n \"title\": \"Case started\",\n \"startTime\": $data.case.start,\n \"description\":$data.case.processDefinitionId.displayDescription,\n \"initiator\": $data.case.started_by.firstname + \" \" + $data.case.started_by.lastname\n};",
+      "exposed" : false
+    },
+    "openedTasks" : {
+      "type" : "url",
+      "value" : "../API/bpm/task?p=0&c=999&d=executedBy&d=assigned_id&f=caseId%3D{{caseOverview.sourceObjectId}}&f=type%3DUSER_TASK&o=last_update_date DESC",
+      "exposed" : false
+    },
+    "archivedContext" : {
+      "type" : "url",
+      "value" : "../API/bpm/archivedCase/{{case.id}}/context",
+      "exposed" : false
+    },
+    "openedContext" : {
+      "type" : "url",
+      "value" : "../API/bpm/case/{{caseId}}/context",
+      "exposed" : false
+    },
+    "context" : {
+      "type" : "expression",
+      "value" : "return (!$data.openCase && $data.archivedContext) ? $data.archivedContext : $data.openedContext;",
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "uuid" : "981aadcf-631a-4742-9507-59e85e93c39e",
+  "type" : "form",
+  "description" : "List all business data related to the root case. List all the tasks done by the participants so far as well as the pending ones.",
+  "displayName" : "Autogenerated Case Overview"
+}
