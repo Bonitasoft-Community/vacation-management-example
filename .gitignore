@@ -69,6 +69,9 @@
 # Web widgets provided by Bonita in the UI Designer.
 /web_widgets/pb*/
 
+# Ignore Maven target folder (can be used to build REST API extensions).
+target/
+
 # Gradle (can be used for example to build and package REST API extensions).
 
 # Ignore Gradle generated files.
