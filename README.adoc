@@ -37,15 +37,6 @@ This example demonstrates the following concepts:
 ... Click on "Confirm" button.
 ... Read more about https://documentation.bonitasoft.com/bonita/7.9/pages[pages] on the Bonita https://documentation.bonitasoft.com/[official documentation].
 . You are now ready to export from Studio and then deploy in the Portal the application definition that will use the previously deployed page:
-.. In Studio menu click on "Development" -> "Application Descriptor" -> "Export...".
-.. Select "Application_Data.xml ../apps/tahiti" from the list.
-.. Click on "Export" button and select any temporary folder to save the file.
-.. Now in the Portal switch to "administrator" view.
-.. Go to "Applications" tab.
-.. Click on "Import" button.
-.. Select the `Application_Data.xml` file.
-.. Click on "Import" button.
-.. Click on "Close" button.
 .. For more information refer to https://documentation.bonitasoft.com/bonita/7.9/applications[applications] in Bonita official documentation.
 . Run the Vacation Management application by accessing to this URL (the port number may vary): http://localhost:8080/bonita/apps/tahiti[`http://localhost:8080/bonita/apps/tahiti`]. You can find the URL of the application in the Portal "administrator view" -> "Applications".
 
