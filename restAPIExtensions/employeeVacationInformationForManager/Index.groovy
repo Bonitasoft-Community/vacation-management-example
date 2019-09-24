@@ -60,7 +60,7 @@ public class Index implements RestApiController {
             def employeeId = user.id
 
             // Get pending vacation request
-            def currentUserVacationRequests = vacationRequestDAO.findByRequesterBonitaBPMId(employeeId, 0, 100)
+            def currentUserVacationRequests = vacationRequestDAO.findByRequesterBonitaUserId(employeeId, 0, 100)
 
             // For each vacation request of current employee
             for(currentUserVacationRequest in currentUserVacationRequests) {
@@ -82,7 +82,7 @@ public class Index implements RestApiController {
             }
 
             // Get vacation available
-            def vacationAvailable = vacationAvailableDAO.findByBonitaBPMId(employeeId)
+            def vacationAvailable = vacationAvailableDAO.findByBonitaUserId(employeeId)
 
             def vacationAvailableInfo = [firstName: user.firstName, lastName: user.lastName, daysAvailableCounter: vacationAvailable.daysAvailableCounter]
 
