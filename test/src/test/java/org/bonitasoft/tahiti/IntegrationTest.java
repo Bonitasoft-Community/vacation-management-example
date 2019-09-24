@@ -99,8 +99,8 @@ public class IntegrationTest {
 		LocalDate today = LocalDate.now();
 		LocalDate tomorrow = today.plusDays(1);
 
-		submitLeaveRequestInputs.put("startDateContract", today);
-		submitLeaveRequestInputs.put("returnDateContract", tomorrow);
+		submitLeaveRequestInputs.put("startDateContract", today.toString());
+		submitLeaveRequestInputs.put("returnDateContract", tomorrow.toString());
 		submitLeaveRequestInputs.put("numberOfDaysContract", Integer.valueOf(1));
 
 		return submitLeaveRequestInputs;
@@ -239,8 +239,8 @@ public class IntegrationTest {
 
 		LocalDate today = LocalDate.now();
 		
-		String in2Days = today.plusDays(2);
-		String in4Days = today.plusDays(4);
+		String in2Days = today.plusDays(2).toString();
+		String in4Days = today.plusDays(4).toString();
 
 		modifyLeaveRequestInputs.put("vacationRequestIdContract", vacationRequestId);
 		modifyLeaveRequestInputs.put("startDateContract", in2Days);
