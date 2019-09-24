@@ -99,8 +99,8 @@ public class IntegrationTest {
 		LocalDate today = LocalDate.now();
 		LocalDate tomorrow = today.plusDays(1);
 
-		submitLeaveRequestInputs.put("startDateContract", today.toString());
-		submitLeaveRequestInputs.put("returnDateContract", tomorrow.toString());
+		submitLeaveRequestInputs.put("startDateContract", today);
+		submitLeaveRequestInputs.put("returnDateContract", tomorrow);
 		submitLeaveRequestInputs.put("numberOfDaysContract", Integer.valueOf(1));
 
 		return submitLeaveRequestInputs;
@@ -138,8 +138,8 @@ public class IntegrationTest {
 				.hasNumberOfDays((Integer) newVacationRequestInputs.get("numberOfDaysContract"))
 				.hasNewRequestProcessInstanceId(newVacationRequestProcessInstanceId)
 				.hasRequesterBonitaUserId(session.getUserId())
-				.hasReturnDate(LocalDate.parse((String)newVacationRequestInputs.get("returnDateContract")))
-				.hasStartDate(LocalDate.parse((String)newVacationRequestInputs.get("startDateContract")));
+				.hasReturnDate((LocalDate)newVacationRequestInputs.get("returnDateContract"))
+				.hasStartDate((LocalDate)newVacationRequestInputs.get("startDateContract"));
 
 		Assert.assertNull(vacationRequest.getReviewerBonitaUserId());
 		Assert.assertNull(vacationRequest.getComments());
@@ -208,8 +208,8 @@ public class IntegrationTest {
 				.hasNumberOfDays((Integer) modifyVacationRequestInputs.get("numberOfDaysContract"))
 				.hasNewRequestProcessInstanceId(newVacationRequestProcessInstanceId)
 				.hasRequesterBonitaUserId(session.getUserId())
-				.hasReturnDate(LocalDate.parse((String)modifyVacationRequestInputs.get("returnDateContract")))
-				.hasStartDate(LocalDate.parse((String)modifyVacationRequestInputs.get("startDateContract")));
+				.hasReturnDate((LocalDate)modifyVacationRequestInputs.get("returnDateContract"))
+				.hasStartDate((LocalDate)modifyVacationRequestInputs.get("startDateContract"));
 
 		Assert.assertNull(vacationRequest.getReviewerBonitaUserId());
 		Assert.assertNull(vacationRequest.getComments());
@@ -239,8 +239,8 @@ public class IntegrationTest {
 
 		LocalDate today = LocalDate.now();
 		
-		String in2Days = today.plusDays(2).toString();
-		String in4Days = today.plusDays(4).toString();
+		LocalDate in2Days = today.plusDays(2);
+		LocalDate in4Days = today.plusDays(4);
 
 		modifyLeaveRequestInputs.put("vacationRequestIdContract", vacationRequestId);
 		modifyLeaveRequestInputs.put("startDateContract", in2Days);
@@ -284,8 +284,8 @@ public class IntegrationTest {
 				.hasNumberOfDays((Integer) newVacationRequestInputs.get("numberOfDaysContract"))
 				.hasNewRequestProcessInstanceId(newVacationRequestProcessInstanceId)
 				.hasRequesterBonitaUserId(session.getUserId())
-				.hasReturnDate(LocalDate.parse((String)newVacationRequestInputs.get("returnDateContract")))
-				.hasStartDate(LocalDate.parse((String)newVacationRequestInputs.get("startDateContract")));
+				.hasReturnDate((LocalDate)newVacationRequestInputs.get("returnDateContract"))
+				.hasStartDate((LocalDate)newVacationRequestInputs.get("startDateContract"));
 
 		Assert.assertNull(vacationRequest.getReviewerBonitaUserId());
 		Assert.assertNull(vacationRequest.getComments());
