@@ -137,11 +137,11 @@ public class IntegrationTest {
 		VacationRequestAssert.assertThat(vacationRequest).hasStatus(VacationRequestStatus.PENDING.getStatus())
 				.hasNumberOfDays((Integer) newVacationRequestInputs.get("numberOfDaysContract"))
 				.hasNewRequestProcessInstanceId(newVacationRequestProcessInstanceId)
-				.hasRequesterBonitaBPMId(session.getUserId())
+				.hasRequesterBonitaUserId(session.getUserId())
 				.hasReturnDate(LocalDate.parse((String)newVacationRequestInputs.get("returnDateContract")))
 				.hasStartDate(LocalDate.parse((String)newVacationRequestInputs.get("startDateContract")));
 
-		Assert.assertNull(vacationRequest.getReviewerBonitaBPMId());
+		Assert.assertNull(vacationRequest.getReviewerBonitaUserId());
 		Assert.assertNull(vacationRequest.getComments());
 
 		// Execute the reviewRequest step
@@ -207,11 +207,11 @@ public class IntegrationTest {
 		VacationRequestAssert.assertThat(vacationRequest).hasStatus(VacationRequestStatus.PENDING.getStatus())
 				.hasNumberOfDays((Integer) modifyVacationRequestInputs.get("numberOfDaysContract"))
 				.hasNewRequestProcessInstanceId(newVacationRequestProcessInstanceId)
-				.hasRequesterBonitaBPMId(session.getUserId())
+				.hasRequesterBonitaUserId(session.getUserId())
 				.hasReturnDate(LocalDate.parse((String)modifyVacationRequestInputs.get("returnDateContract")))
 				.hasStartDate(LocalDate.parse((String)modifyVacationRequestInputs.get("startDateContract")));
 
-		Assert.assertNull(vacationRequest.getReviewerBonitaBPMId());
+		Assert.assertNull(vacationRequest.getReviewerBonitaUserId());
 		Assert.assertNull(vacationRequest.getComments());
 
 		// Execute the reviewRequest step
@@ -226,7 +226,7 @@ public class IntegrationTest {
 				newVacationRequestProcessInstanceId, "vacationRequest");
 
 		VacationRequestAssert.assertThat(vacationRequest).hasStatus(VacationRequestStatus.APPROVED.getStatus());
-		Assert.assertNotNull(vacationRequest.getReviewerBonitaBPMId());
+		Assert.assertNotNull(vacationRequest.getReviewerBonitaUserId());
 
 		// Check the vacation available counter
 		VacationAvailable vacationAvailable = BonitaBPMAssert.assertBusinessDataNotNull(VacationAvailable.class,
@@ -283,11 +283,11 @@ public class IntegrationTest {
 		VacationRequestAssert.assertThat(vacationRequest).hasStatus(VacationRequestStatus.CANCELLED.getStatus())
 				.hasNumberOfDays((Integer) newVacationRequestInputs.get("numberOfDaysContract"))
 				.hasNewRequestProcessInstanceId(newVacationRequestProcessInstanceId)
-				.hasRequesterBonitaBPMId(session.getUserId())
+				.hasRequesterBonitaUserId(session.getUserId())
 				.hasReturnDate(LocalDate.parse((String)newVacationRequestInputs.get("returnDateContract")))
 				.hasStartDate(LocalDate.parse((String)newVacationRequestInputs.get("startDateContract")));
 
-		Assert.assertNull(vacationRequest.getReviewerBonitaBPMId());
+		Assert.assertNull(vacationRequest.getReviewerBonitaUserId());
 		Assert.assertNull(vacationRequest.getComments());
 
 		// Check process is finished
@@ -297,7 +297,7 @@ public class IntegrationTest {
 		vacationRequest = BonitaBPMAssert.assertBusinessDataNotNull(VacationRequest.class,
 				newVacationRequestProcessInstanceId, "vacationRequest");
 
-		Assert.assertNull(vacationRequest.getReviewerBonitaBPMId());
+		Assert.assertNull(vacationRequest.getReviewerBonitaUserId());
 
 		// Check the vacation available counter
 		VacationAvailable vacationAvailable = BonitaBPMAssert.assertBusinessDataNotNull(VacationAvailable.class,
