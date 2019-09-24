@@ -13,7 +13,7 @@ This example demonstrates the following concepts:
 == Installation
 
 . Start Bonita Studio 7.9.3 or later
-. Download the https://github.com/Bonitasoft-Community/vacation-management-example/releases[application bundle]
+. Download the https://github.com/Bonitasoft-Community/vacation-management-example/releases[application bundle] (includes .bos and REST API extension .zip file)
 . Extract the bundle to a temporary folder
 . Import the .bos file in your Bonita Studio. It contains 5 diagrams: Example-NewVacationRequest, Example-ModifyPendingVacationRequest, Example-CancelVacationRequest, Example-InitiateVacationAvailable and Example-RemoveAllBusinessData. Each diagram includes a single process definition. It also includes business data model definition, default process configuration, application page and definition (i.e. application user interface definition). *Important*: importing the `.bos` file will ask you to override your existing business data model.
 . Open the Example-InitiateVacationAvailable diagram and run the process (click on **Run** button in a Bonita Studio). This process will initialize a business data that store vacation available counter for each Bonita user declared in the default test environment (ACME organization).
