@@ -3,7 +3,7 @@
   "previousDesignerVersion" : "1.5.7",
   "id" : "initiateVacationAvailableOverview",
   "name" : "initiateVacationAvailableOverview",
-  "lastUpdate" : 1568900472961,
+  "lastUpdate" : 1569397328952,
   "rows" : [ [ {
     "type" : "component",
     "dimension" : {
@@ -58,10 +58,11 @@
       },
       "columnsKey" : {
         "type" : "constant",
-        "value" : [ "bonitaBPMId", "daysAvailableCounter" ]
+        "value" : [ "bonitaUserId", "daysAvailableCounter" ]
       },
       "selectedRow" : {
-        "type" : "variable"
+        "type" : "variable",
+        "value" : ""
       }
     },
     "reference" : "5a98543c-407c-47b7-935f-0375cbfce6fb",

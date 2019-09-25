@@ -3,7 +3,7 @@
   "previousDesignerVersion" : "1.5.7",
   "id" : "removeAllBusinessDataOverview",
   "name" : "removeAllBusinessDataOverview",
-  "lastUpdate" : 1568900522972,
+  "lastUpdate" : 1569397203409,
   "rows" : [ [ {
     "type" : "component",
     "dimension" : {
@@ -58,10 +58,11 @@
       },
       "columnsKey" : {
         "type" : "constant",
-        "value" : [ "bonitaBPMId", "daysAvailableCounter" ]
+        "value" : [ "bonitaUserId", "daysAvailableCounter" ]
       },
       "selectedRow" : {
-        "type" : "variable"
+        "type" : "variable",
+        "value" : ""
       }
     },
     "reference" : "5a98543c-407c-47b7-935f-0375cbfce6fb",
@@ -121,10 +122,11 @@
       },
       "columnsKey" : {
         "type" : "constant",
-        "value" : [ "requesterBonitaBPMId", "reviewerBonitaBPMId", "startDate  | date : mediumDate : 'UTC'", "returnDate  | date : mediumDate : 'UTC'", "status", "comments" ]
+        "value" : [ "requesterBonitaUserId", "reviewerBonitaUserId", "startDate  | date : mediumDate : 'UTC'", "returnDate  | date : mediumDate : 'UTC'", "status", "comments" ]
       },
       "selectedRow" : {
-        "type" : "variable"
+        "type" : "variable",
+        "value" : ""
       }
     },
     "reference" : "5625c3bb-c227-4f40-9fd3-ea29e1f47619",

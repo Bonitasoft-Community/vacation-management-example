@@ -3,7 +3,7 @@
   "previousDesignerVersion" : "1.5.7",
   "id" : "cancellationReviewForm",
   "name" : "cancellationReviewForm",
-  "lastUpdate" : 1568900460045,
+  "lastUpdate" : 1569397276789,
   "rows" : [ [ {
     "type" : "component",
     "dimension" : {
@@ -514,12 +514,12 @@
     },
     "requester" : {
       "type" : "url",
-      "value" : "../API/identity/user/{{vacationRequestBusinessData.requesterBonitaBPMId_string}}",
+      "value" : "../API/identity/user/{{vacationRequestBusinessData.requesterBonitaUserId_string}}",
       "exposed" : false
     },
     "requesterCurrentDaysAvailable" : {
       "type" : "url",
-      "value" : "../API/bdm/businessData/com.company.model.VacationAvailable?q=findByBonitaBPMId&p=0&c=1&f=bonitaBPMId={{vacationRequestBusinessData.requesterBonitaBPMId_string}}",
+      "value" : "../API/bdm/businessData/com.company.model.VacationAvailable?q=findByBonitaUserId&p=0&c=1&f=bonitaUserId={{vacationRequestBusinessData.requesterBonitaUserId_string}}",
       "exposed" : false
     },
     "vacationRequestBusinessData" : {
