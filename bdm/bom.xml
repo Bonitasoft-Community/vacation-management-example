@@ -3,7 +3,9 @@
     <businessObjects>
         <businessObject qualifiedName="com.company.model.VacationRequest">
             <description>An employee vacation request.&#xD;
-Possible status values are: pending, approved, refused, processing cancellation and cancelled.</description>
+Possible status values are: pending, approved, refused, processing cancellation and cancelled.
+Note that we store only date (with hours, minutes... information) for start and return dates.
+Bonita use Java Long data type to store user and process instance id. Due to JavaScript limitation regarding maximum value of a number this value will be converted to text when being sent and received from end user web browser.</description>
             <fields>
                 <field type="LONG" length="255" name="requesterBonitaUserId" nullable="false" collection="false"/>
                 <field type="LONG" length="255" name="reviewerBonitaUserId" nullable="true" collection="false"/>

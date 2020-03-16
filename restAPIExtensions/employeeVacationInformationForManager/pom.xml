@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.bonitasoft.example</groupId>
 	<artifactId>employeeVacationInformationForManager</artifactId>
-	<version>7.9.3-1.5</version>
+	<version>7.10.3-1.5</version>
 	<packaging>pom</packaging>
 	<name>Employee vacation information for manager REST API extension</name>
 	
@@ -15,7 +15,7 @@
 		<plugins>
 			<plugin>
 				<artifactId>maven-assembly-plugin</artifactId>
-				<version>3.1.1</version>
+				<version>3.2.0</version>
 				<configuration>
 					<descriptors>
 						<descriptor>src/assembly/description.xml</descriptor>

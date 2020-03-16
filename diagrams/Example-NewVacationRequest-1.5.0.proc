@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:connectorconfiguration="http://wwww.bonitasoft.org/model/connector/configuration" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:definition="http://www.bonitasoft.org/ns/connector/definition/6.1" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:parameter="http://www.bonitasoft.org/ns/studio/parameter" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
-  <process:MainProcess xmi:id="_WQx3EEUNEeeJkrA3PIO9Tw" documentation="Allow requester to create a new vacation request and manager to review it and approve or reject the request." name="Example-NewVacationRequest" version="1.5.0" author="antoine" bonitaVersion="7.9.4" bonitaModelVersion="7.9.0-002" configId="ACED000574000E372E392E302D303032372E392E34">
+  <process:MainProcess xmi:id="_WQx3EEUNEeeJkrA3PIO9Tw" documentation="Allow requester to create a new vacation request and manager to review it and approve or reject the request." name="Example-NewVacationRequest" version="1.5.0" author="antoine" bonitaVersion="7.10.3" bonitaModelVersion="7.10.0-001" configId="ACED0005740010372E31302E302D303031372E31302E33">
     <elements xmi:type="process:Pool" xmi:id="_WQx3EUUNEeeJkrA3PIO9Tw" documentation="Allow requester to create a new vacation request and manager to review it and approve or reject the request." name="New Vacation Request" version="1.5.0" displayName="New vacation request">
       <elements xmi:type="process:Lane" xmi:id="_WQx3EkUNEeeJkrA3PIO9Tw" name="Requester lane" actor="_WQygaUUNEeeJkrA3PIO9Tw">
         <elements xmi:type="process:StartEvent" xmi:id="_WQx3E0UNEeeJkrA3PIO9Tw" name="New Vacation Request Start" outgoing="_WQygIUUNEeeJkrA3PIO9Tw">
@@ -35,8 +35,8 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_WQx3LEUNEeeJkrA3PIO9Tw" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_WQx3LUUNEeeJkrA3PIO9Tw" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_WQx3LkUNEeeJkrA3PIO9Tw" name="" content="" returnTypeFixed="true"/>
-          <connectors xmi:type="process:Connector" xmi:id="_T5X2oEUUEeeJkrA3PIO9Tw" name="emailNotifyManagerRequestPending" definitionId="email" event="ON_ENTER" ignoreErrors="true" definitionVersion="1.0.0">
-            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_T5X2oUUUEeeJkrA3PIO9Tw" definitionId="email" version="1.0.0" modelVersion="7.1.0-001">
+          <connectors xmi:type="process:Connector" xmi:id="_T5X2oEUUEeeJkrA3PIO9Tw" name="emailNotifyManagerRequestPending" definitionId="email" event="ON_ENTER" ignoreErrors="true" definitionVersion="1.1.0">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_T5X2oUUUEeeJkrA3PIO9Tw" definitionId="email" version="1.1.0" modelVersion="7.1.0-001">
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_T5X2okUUEeeJkrA3PIO9Tw" key="smtpHost">
                 <expression xmi:type="expression:Expression" xmi:id="_T5X2o0UUEeeJkrA3PIO9Tw" name="emailServerAddress" content="emailServerAddress" type="TYPE_PARAMETER" returnTypeFixed="true">
                   <referencedElements xmi:type="parameter:Parameter" xmi:id="_T5X2pEUUEeeJkrA3PIO9Tw" name="emailServerAddress" typeClassname="java.lang.String"/>
@@ -102,6 +102,11 @@
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_T5X2ykUUEeeJkrA3PIO9Tw" key="attachments">
                 <expression xmi:type="expression:ListExpression" xmi:id="_T5X2y0UUEeeJkrA3PIO9Tw"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_yxpxqmeUEeqLtoKXrpaKXg" key="returnPath">
+                <expression xmi:type="expression:Expression" xmi:id="_yxq_2WeUEeqLtoKXrpaKXg" name="emailNotificationSender" content="emailNotificationSender" type="TYPE_PARAMETER" returnTypeFixed="true">
+                  <referencedElements xmi:type="parameter:Parameter" xmi:id="_yxq_2meUEeqLtoKXrpaKXg" name="emailNotificationSender" typeClassname="java.lang.String"/>
+                </expression>
               </parameters>
             </configuration>
           </connectors>
@@ -382,8 +387,8 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_WQx4F0UNEeeJkrA3PIO9Tw" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_WQx4GEUNEeeJkrA3PIO9Tw" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_WQx4GUUNEeeJkrA3PIO9Tw" name="" content="" returnTypeFixed="true"/>
-          <connectors xmi:type="process:Connector" xmi:id="_ma5boEUVEeeJkrA3PIO9Tw" name="emailNotifyEmployeeRequestApproved" definitionId="email" event="ON_ENTER" ignoreErrors="true" definitionVersion="1.0.0">
-            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_ma5boUUVEeeJkrA3PIO9Tw" definitionId="email" version="1.0.0" modelVersion="7.1.0-001">
+          <connectors xmi:type="process:Connector" xmi:id="_ma5boEUVEeeJkrA3PIO9Tw" name="emailNotifyEmployeeRequestApproved" definitionId="email" event="ON_ENTER" ignoreErrors="true" definitionVersion="1.1.0">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_ma5boUUVEeeJkrA3PIO9Tw" definitionId="email" version="1.1.0" modelVersion="7.1.0-001">
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_ma5bokUVEeeJkrA3PIO9Tw" key="smtpHost">
                 <expression xmi:type="expression:Expression" xmi:id="_ma5bo0UVEeeJkrA3PIO9Tw" name="emailServerAddress" content="emailServerAddress" type="TYPE_PARAMETER" returnTypeFixed="true">
                   <referencedElements xmi:type="parameter:Parameter" xmi:id="_ma5bpEUVEeeJkrA3PIO9Tw" name="emailServerAddress" typeClassname="java.lang.String"/>
@@ -450,6 +455,11 @@
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_ma5bykUVEeeJkrA3PIO9Tw" key="attachments">
                 <expression xmi:type="expression:ListExpression" xmi:id="_ma5by0UVEeeJkrA3PIO9Tw"/>
               </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_yxpx6GeUEeqLtoKXrpaKXg" key="returnPath">
+                <expression xmi:type="expression:Expression" xmi:id="_yxq_22eUEeqLtoKXrpaKXg" name="emailNotificationSender" content="emailNotificationSender" type="TYPE_PARAMETER" returnTypeFixed="true">
+                  <referencedElements xmi:type="parameter:Parameter" xmi:id="_yxq_3GeUEeqLtoKXrpaKXg" name="emailNotificationSender" typeClassname="java.lang.String"/>
+                </expression>
+              </parameters>
             </configuration>
           </connectors>
           <loopCondition xmi:type="expression:Expression" xmi:id="_WQx4RkUNEeeJkrA3PIO9Tw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
@@ -463,8 +473,8 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_WQx4TkUNEeeJkrA3PIO9Tw" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_WQx4T0UNEeeJkrA3PIO9Tw" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_WQx4UEUNEeeJkrA3PIO9Tw" name="" content="" returnTypeFixed="true"/>
-          <connectors xmi:type="process:Connector" xmi:id="_ov0roEUVEeeJkrA3PIO9Tw" name="emailNotifyEmployeeRequestRefused" definitionId="email" event="ON_ENTER" ignoreErrors="true" definitionVersion="1.0.0">
-            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_ov0roUUVEeeJkrA3PIO9Tw" definitionId="email" version="1.0.0" modelVersion="7.1.0-001">
+          <connectors xmi:type="process:Connector" xmi:id="_ov0roEUVEeeJkrA3PIO9Tw" name="emailNotifyEmployeeRequestRefused" definitionId="email" event="ON_ENTER" ignoreErrors="true" definitionVersion="1.1.0">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_ov0roUUVEeeJkrA3PIO9Tw" definitionId="email" version="1.1.0" modelVersion="7.1.0-001">
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_ov0rokUVEeeJkrA3PIO9Tw" key="smtpHost">
                 <expression xmi:type="expression:Expression" xmi:id="_ov0ro0UVEeeJkrA3PIO9Tw" name="emailServerAddress" content="emailServerAddress" type="TYPE_PARAMETER" returnTypeFixed="true">
                   <referencedElements xmi:type="parameter:Parameter" xmi:id="_ov0rpEUVEeeJkrA3PIO9Tw" name="emailServerAddress" typeClassname="java.lang.String"/>
@@ -531,6 +541,11 @@
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_ov0rykUVEeeJkrA3PIO9Tw" key="attachments">
                 <expression xmi:type="expression:ListExpression" xmi:id="_ov0ry0UVEeeJkrA3PIO9Tw"/>
               </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_yxpx-meUEeqLtoKXrpaKXg" key="returnPath">
+                <expression xmi:type="expression:Expression" xmi:id="_yxq_3WeUEeqLtoKXrpaKXg" name="emailNotificationSender" content="emailNotificationSender" type="TYPE_PARAMETER" returnTypeFixed="true">
+                  <referencedElements xmi:type="parameter:Parameter" xmi:id="_yxq_3meUEeqLtoKXrpaKXg" name="emailNotificationSender" typeClassname="java.lang.String"/>
+                </expression>
+              </parameters>
             </configuration>
           </connectors>
           <loopCondition xmi:type="expression:Expression" xmi:id="_WQx4fUUNEeeJkrA3PIO9Tw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
@@ -544,8 +559,8 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_WQx4hUUNEeeJkrA3PIO9Tw" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_WQx4hkUNEeeJkrA3PIO9Tw" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_WQx4h0UNEeeJkrA3PIO9Tw" name="" content="" returnTypeFixed="true"/>
-          <connectors xmi:type="process:Connector" xmi:id="_2eQVEEUWEeeJkrA3PIO9Tw" name="emailNotifyHRRequestRefused" definitionId="email" event="ON_ENTER" ignoreErrors="true" definitionVersion="1.0.0">
-            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_2eQVEUUWEeeJkrA3PIO9Tw" definitionId="email" version="1.0.0" modelVersion="7.1.0-001">
+          <connectors xmi:type="process:Connector" xmi:id="_2eQVEEUWEeeJkrA3PIO9Tw" name="emailNotifyHRRequestRefused" definitionId="email" event="ON_ENTER" ignoreErrors="true" definitionVersion="1.1.0">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_2eQVEUUWEeeJkrA3PIO9Tw" definitionId="email" version="1.1.0" modelVersion="7.1.0-001">
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_2eQVEkUWEeeJkrA3PIO9Tw" key="smtpHost">
                 <expression xmi:type="expression:Expression" xmi:id="_2eQVE0UWEeeJkrA3PIO9Tw" name="emailServerAddress" content="emailServerAddress" type="TYPE_PARAMETER" returnTypeFixed="true">
                   <referencedElements xmi:type="parameter:Parameter" xmi:id="_2eQVFEUWEeeJkrA3PIO9Tw" name="emailServerAddress" typeClassname="java.lang.String"/>
@@ -614,6 +629,11 @@
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_2eQVO0UWEeeJkrA3PIO9Tw" key="attachments">
                 <expression xmi:type="expression:ListExpression" xmi:id="_2eQVPEUWEeeJkrA3PIO9Tw"/>
               </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_yxpyDGeUEeqLtoKXrpaKXg" key="returnPath">
+                <expression xmi:type="expression:Expression" xmi:id="_yxq_32eUEeqLtoKXrpaKXg" name="emailNotificationSender" content="emailNotificationSender" type="TYPE_PARAMETER" returnTypeFixed="true">
+                  <referencedElements xmi:type="parameter:Parameter" xmi:id="_yxq_4GeUEeqLtoKXrpaKXg" name="emailNotificationSender" typeClassname="java.lang.String"/>
+                </expression>
+              </parameters>
             </configuration>
           </connectors>
           <loopCondition xmi:type="expression:Expression" xmi:id="_WQx4tUUNEeeJkrA3PIO9Tw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
@@ -671,8 +691,8 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_WQyeTUUNEeeJkrA3PIO9Tw" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_WQyeTkUNEeeJkrA3PIO9Tw" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_WQyeT0UNEeeJkrA3PIO9Tw" name="" content="" returnTypeFixed="true"/>
-          <connectors xmi:type="process:Connector" xmi:id="_DvBnkEUXEeeJkrA3PIO9Tw" name="emailRemindManagerRequestPending" definitionId="email" event="ON_ENTER" ignoreErrors="true" definitionVersion="1.0.0">
-            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_DvBnkUUXEeeJkrA3PIO9Tw" definitionId="email" version="1.0.0" modelVersion="7.1.0-001">
+          <connectors xmi:type="process:Connector" xmi:id="_DvBnkEUXEeeJkrA3PIO9Tw" name="emailRemindManagerRequestPending" definitionId="email" event="ON_ENTER" ignoreErrors="true" definitionVersion="1.1.0">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_DvBnkUUXEeeJkrA3PIO9Tw" definitionId="email" version="1.1.0" modelVersion="7.1.0-001">
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_DvBnkkUXEeeJkrA3PIO9Tw" key="smtpHost">
                 <expression xmi:type="expression:Expression" xmi:id="_DvBnk0UXEeeJkrA3PIO9Tw" name="emailServerAddress" content="emailServerAddress" type="TYPE_PARAMETER" returnTypeFixed="true">
                   <referencedElements xmi:type="parameter:Parameter" xmi:id="_DvBnlEUXEeeJkrA3PIO9Tw" name="emailServerAddress" typeClassname="java.lang.String"/>
@@ -738,6 +758,11 @@
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_DvBnukUXEeeJkrA3PIO9Tw" key="attachments">
                 <expression xmi:type="expression:ListExpression" xmi:id="_DvBnu0UXEeeJkrA3PIO9Tw"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_yxpyHmeUEeqLtoKXrpaKXg" key="returnPath">
+                <expression xmi:type="expression:Expression" xmi:id="_yxq_4WeUEeqLtoKXrpaKXg" name="emailNotificationSender" content="emailNotificationSender" type="TYPE_PARAMETER" returnTypeFixed="true">
+                  <referencedElements xmi:type="parameter:Parameter" xmi:id="_yxq_4meUEeqLtoKXrpaKXg" name="emailNotificationSender" typeClassname="java.lang.String"/>
+                </expression>
               </parameters>
             </configuration>
           </connectors>

@@ -1,86 +1,119 @@
 {
-  "designerVersion" : "1.9.24",
-  "previousDesignerVersion" : "1.5.7",
+  "designerVersion" : "1.10.18",
+  "previousDesignerVersion" : "1.9.24",
   "id" : "initiateVacationAvailableOverview",
   "name" : "initiateVacationAvailableOverview",
-  "lastUpdate" : 1569397328952,
-  "rows" : [ [ {
-    "type" : "component",
-    "dimension" : {
-      "xs" : 12
-    },
-    "propertyValues" : {
-      "cssClasses" : {
-        "type" : "constant",
-        "value" : ""
-      },
-      "hidden" : {
-        "type" : "constant",
-        "value" : false
-      },
-      "text" : {
-        "type" : "interpolation",
-        "value" : "List of vacation available per user"
-      },
-      "level" : {
-        "type" : "constant",
-        "value" : "Level 2"
-      },
-      "alignment" : {
-        "type" : "constant",
-        "value" : "left"
+  "lastUpdate" : 1584369920668,
+  "rows" : [
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "text" : {
+            "type" : "interpolation",
+            "value" : "List of vacation available per user"
+          },
+          "level" : {
+            "type" : "constant",
+            "value" : "Level 2"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "left"
+          }
+        },
+        "reference" : "6b3ef5dc-a961-4cfb-be8d-2ddd561feae9",
+        "hasValidationError" : false,
+        "id" : "pbTitle"
       }
-    },
-    "reference" : "6b3ef5dc-a961-4cfb-be8d-2ddd561feae9",
-    "hasValidationError" : false,
-    "id" : "pbTitle"
-  } ], [ {
-    "type" : "component",
-    "dimension" : {
-      "xs" : 12
-    },
-    "propertyValues" : {
-      "cssClasses" : {
-        "type" : "constant",
-        "value" : ""
-      },
-      "hidden" : {
-        "type" : "constant",
-        "value" : false
-      },
-      "headers" : {
-        "type" : "constant",
-        "value" : [ "User id", "# of days" ]
-      },
-      "content" : {
-        "type" : "expression",
-        "value" : "vacationsAvailable"
-      },
-      "columnsKey" : {
-        "type" : "constant",
-        "value" : [ "bonitaUserId", "daysAvailableCounter" ]
-      },
-      "selectedRow" : {
-        "type" : "variable",
-        "value" : ""
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "headers" : {
+            "type" : "constant",
+            "value" : [
+              "User id",
+              "# of days"
+            ]
+          },
+          "content" : {
+            "type" : "expression",
+            "value" : "vacationsAvailable"
+          },
+          "columnsKey" : {
+            "type" : "constant",
+            "value" : [
+              "bonitaUserId",
+              "daysAvailableCounter"
+            ]
+          },
+          "selectedRow" : {
+            "type" : "variable",
+            "value" : ""
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "striped" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "condensed" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "bordered" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
+        "reference" : "5a98543c-407c-47b7-935f-0375cbfce6fb",
+        "hasValidationError" : false,
+        "id" : "pbTable"
       }
-    },
-    "reference" : "5a98543c-407c-47b7-935f-0375cbfce6fb",
-    "hasValidationError" : false,
-    "id" : "pbTable"
-  } ] ],
-  "assets" : [ {
-    "id" : "e88d4a35-7d24-411e-8e49-768a98b3c231",
-    "name" : "style.css",
-    "type" : "css",
-    "order" : 1,
-    "external" : false
-  } ],
+    ]
+  ],
+  "assets" : [
+    {
+      "id" : "e88d4a35-7d24-411e-8e49-768a98b3c231",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 1,
+      "external" : false
+    }
+  ],
   "inactiveAssets" : [ ],
-  "data" : {
+  "variables" : {
     "vacationsAvailable" : {
       "type" : "url",
-      "value" : "../API/bdm/businessData/com.company.model.VacationAvailable?q=find&p=0&c=100",
+      "value" : [
+        "../API/bdm/businessData/com.company.model.VacationAvailable?q=find&p=0&c=100"
+      ],
       "exposed" : false
     }
   },
