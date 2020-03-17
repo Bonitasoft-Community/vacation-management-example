@@ -3,7 +3,7 @@
   "previousDesignerVersion" : "1.9.24",
   "id" : "newVacationRequestOverviewForm",
   "name" : "newVacationRequestOverviewForm",
-  "lastUpdate" : 1584387560983,
+  "lastUpdate" : 1584383622670,
   "rows" : [
     [
       {
@@ -442,6 +442,90 @@
               "reference" : "56f60d5a-18ba-46bb-b39b-5067c4757100",
               "hasValidationError" : false,
               "id" : "pbText"
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "events" : {
+                  "type" : "expression",
+                  "value" : "timelineEvents"
+                },
+                "noEventsTitle" : {
+                  "type" : "expression",
+                  "value" : "\"No Events yet.\" | translate"
+                },
+                "noEventsContent" : {
+                  "type" : "expression",
+                  "value" : "\"Nothing noticeable happened yet... But it surely will come!\" | translate"
+                },
+                "eventsTitleExpression" : {
+                  "type" : "constant",
+                  "value" : "event.title"
+                },
+                "eventsContentExpression" : {
+                  "type" : "constant",
+                  "value" : "event.description"
+                },
+                "eventsTimeExpression" : {
+                  "type" : "constant",
+                  "value" : "event.lastUpdateDate"
+                },
+                "eventsTimeAttributeFormat" : {
+                  "type" : "constant",
+                  "value" : "medium"
+                },
+                "eventsAuthorExpression" : {
+                  "type" : "constant",
+                  "value" : "event.executedBy || event.assignedTo"
+                },
+                "origin" : {
+                  "type" : "expression",
+                  "value" : "timelineOrigin"
+                },
+                "originTitleExpression" : {
+                  "type" : "constant",
+                  "value" : "origin.title | translate"
+                },
+                "originContentExpression" : {
+                  "type" : "constant",
+                  "value" : "origin.description"
+                },
+                "originTimeExpression" : {
+                  "type" : "constant",
+                  "value" : "origin.startTime"
+                },
+                "originAuthorExpression" : {
+                  "type" : "constant",
+                  "value" : "origin.initiator"
+                },
+                "eventsIconStyleExpression" : {
+                  "type" : "expression",
+                  "value" : "\"event.style\""
+                },
+                "eventsIconExpression" : {
+                  "type" : "constant",
+                  "value" : "event.icon"
+                }
+              },
+              "reference" : "c12ddba4-479a-4749-8a54-120f006e9ffd",
+              "hasValidationError" : false,
+              "id" : "timelineWidget"
             }
           ]
         ]
