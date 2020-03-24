@@ -22,10 +22,10 @@ This example demonstrates the following concepts:
       1. In the Portal, switch to **Administrator** view. Use drop down list on top right corner to switch from **User** to **Administrator**.
       1. Go to **Resources**.
       1. Click on **Add** button.
-      1. Select the `employeeVacationInformationForManager-7.9.3-1.5.zip` file.
+      1. Select the `vacationRestApiExtension.zip` file.
       1. Click on **Next** button.
       1. Click on *Confirm** button.
-      1. Read more about [REST API extension](https://documentation.bonitasoft.com/bonita/7.9/rest-api-extensions) in Bonita BPM [official documentation](https://documentation.bonitasoft.com/).
+      1. Read more about [REST API extension](https://documentation.bonitasoft.com/bonita//rest-api-extensions) in Bonita [official documentation](https://documentation.bonitasoft.com/).
    1. Next you need to deploy the application page:
       1. In Bonita Studio project explorer unfold **Pages/Forms/Layout** node.
       1. Select "ExampleVacationManagement" application page.
