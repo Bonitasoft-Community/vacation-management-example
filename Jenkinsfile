@@ -1,7 +1,7 @@
 node {
     // URL of the GitHub repository
     def gitRepositoryURL = scm.userRemoteConfigs[0].url
-    
+
     // Need to do a checkout due to https://issues.jenkins-ci.org/browse/JENKINS-46431
     checkout scm
 

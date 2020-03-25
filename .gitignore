@@ -64,7 +64,9 @@
 /web_page/.metadata
 
 # Output of web component build
+# Make sure that we keep the controler
 /web_widgets/*/*.js
+!/web_widgets/*/*.ctrl.js
 /web_page/*/js
 
 # Web widgets provided by Bonita in the UI Designer.
